@@ -1,69 +1,88 @@
 # Completion Report — {{task_name}}
 
-**Status:** Complete | Partially complete | Blocked
-**Approved plan:** {{path_or_reference}}
-**Prepared by:** {{author_or_agent}}
+**Final status:** `COMPLETED | PARTIALLY_COMPLETED | BLOCKED | FAILED`  
+**Approved plan:** {{reference}}  
+**Framework / kernel:** {{exact_versions}}  
+**Prepared by:** {{actor}}  
 **Date:** {{date}}
 
 ## 1. Outcome
 
-{{concise_description_of_the_result}}
+{{concise_evidence_based_result}}
 
 ## 2. Delivered changes
 
-| Change | Files | Planned? | Result |
+| Change | Files / systems | Planned? | Actual result |
 |---|---|---:|---|
-| {{change}} | {{files}} | Yes / No | {{result}} |
+| {{change}} | {{targets}} | Yes / No | {{result}} |
 
 ## 3. Requirements traceability
 
-| Requirement / success criterion | Source | Implementation | Verification evidence | Status |
+| Requirement / success criterion | Authority | Implementation | Actual verification | Status |
 |---|---|---|---|---|
-| {{requirement}} | {{artifact_or_decision}} | {{change}} | {{evidence}} | Pass / Fail / Blocked |
+| {{requirement}} | {{source}} | {{change}} | {{evidence}} | `PASS / FAIL / BLOCKED / NOT_RUN` |
 
 ## 4. Verification evidence
 
-Record actual results, not commands that were merely intended.
+Record actual results, not intended commands.
 
-| Check | Command / method | Actual result | Status |
+| Check | Method | Actual result | Status |
 |---|---|---|---|
-| {{check}} | `{{command_or_method}}` | {{result}} | Pass / Fail / Not run |
+| {{check}} | `{{method}}` | {{result}} | `PASS / FAIL / BLOCKED / NOT_RUN` |
 
-## 5. Deviations from the approved plan
+## 5. Deviations and state invalidations
 
-| Deviation | Why it changed | Approval / evidence | Impact |
+| Deviation / new evidence | Affected claim, gate, or plan | Authority / resolution | Impact |
 |---|---|---|---|
-| {{deviation_or_none}} | {{reason}} | {{reference}} | {{impact}} |
+| {{item_or_none}} | {{affected_state}} | {{reference}} | {{impact}} |
 
-## 6. Edge cases and limitations
+## 6. Failure and recovery record
 
-- **Covered:** {{edge_case_and_evidence}}
+| Failure | Diagnosis | Retry hypothesis / substitute | Result | Scope degradation |
+|---|---|---|---|---|
+| {{failure_or_none}} | {{cause}} | {{action}} | {{result}} | {{degradation}} |
+
+## 7. Edge cases, limitations, and residual risk
+
+- **Covered:** {{edge_cases_and_evidence}}
 - **Known limitation:** {{limitation_or_none}}
+- **Residual risk:** {{risk_state_owner_and_acceptance_or_none}}
+- **Ideal versus viable result:** {{difference_or_same}}
 
-## 7. Remaining work
+## 8. Capability usage ledger
 
-Separate blockers from explicitly accepted, non-blocking follow-up work.
+| Platform / provider / adapter | Capability and version | Selected / rejected / blocked | Permissions | Actual utility / failure | Retention recommendation |
+|---|---|---|---|---|---|
+| {{identity}} | {{capability}} | {{decision}} | {{permissions}} | {{result}} | {{recommendation}} |
 
-| Item | Blocking? | Owner | Next action |
-|---|---:|---|---|
-| {{item_or_none}} | Yes / No | {{owner}} | {{action}} |
+## 9. Remaining work and handoff
 
-## 8. Final review
+| Item | Blocking? | Owner | Next action | Required decision |
+|---|---:|---|---|---|
+| {{item_or_none}} | Yes / No | {{owner}} | {{action}} | {{decision_or_none}} |
 
-- [ ] Requirements are satisfied.
-- [ ] The specification is respected.
-- [ ] Style and execution norms are respected.
-- [ ] The approved architecture is respected.
-- [ ] Tests and validation checks pass.
-- [ ] Relevant edge cases are covered.
-- [ ] Documentation is updated.
-- [ ] Deviations are recorded and approved.
-- [ ] No hidden assumptions remain.
+## 10. Learning candidates
 
-## 9. Final status
+| Observation | Evidence | Scope | Private data removed? | Proposed post-close state |
+|---|---|---|---:|---|
+| {{candidate_or_none}} | {{evidence}} | Problem / Process / Capability / Decision / Project | Yes / No | `CANDIDATE / DEFERRED / REJECTED` |
 
-**Decision:** {{complete_partial_or_blocked}}
-**Reason:** {{evidence_based_reason}}
+Runtime MUST NOT promote these candidates or modify the core.
 
-A task is complete only when every required claim is supported by retained
-evidence. Otherwise report it as partial or blocked.
+## 11. Final review
+
+- [ ] Intent, contract, and actual evidence converge for the selected status.
+- [ ] Required checks were executed or honestly marked otherwise.
+- [ ] Scope, style, architecture, and permissions were respected.
+- [ ] Deviations and invalidations are recorded with authority.
+- [ ] Relevant edge cases and residual risks are explicit.
+- [ ] Documentation and handoff are sufficient for the budget.
+- [ ] Exact versions and snapshot are retained.
+- [ ] No runtime core or shared-learning mutation occurred.
+
+## 12. Final decision
+
+- **Status:** `COMPLETED / PARTIALLY_COMPLETED / BLOCKED / FAILED`
+- **Reason:** {{intent_contract_evidence_reason}}
+- **Closure depth:** `LIGHT / STANDARD / COMPLETE`
+- **Independent evaluation / handoff:** {{result_or_not_required}}

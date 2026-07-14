@@ -1,109 +1,93 @@
 # Implementation Plan — {{task_name}}
 
-**Status:** Draft | Awaiting approval | Approved
-**Context brief:** {{path_or_reference}}
-**Prepared by:** {{author_or_agent}}
+**Status:** `DRAFT | AWAITING_APPROVAL | APPROVED | INVALIDATED`  
+**Context brief:** {{reference}}  
+**Framework / kernel:** {{exact_versions}}  
+**Prepared by:** {{actor}}  
 **Date:** {{date}}
 
-## 1. Outcome
+## 1. Outcome and boundaries
 
-{{result_that_this_plan_will_produce}}
+- **Outcome:** {{result}}
+- **In scope:** {{scope}}
+- **Out of scope:** {{exclusions}}
+- **Constraints and sources:** {{constraints}}
+- **Authorized intervention and permissions:** {{mode_and_permissions}}
 
-## 2. Approved boundaries
+## 2. Architecture
 
-### In scope
+{{components_responsibilities_interfaces_and_decisions}}
 
-- {{scope_item}}
+## 3. Implementation order
 
-### Out of scope
+{{why_this_order_controls_dependencies_risk_and_reversibility}}
 
-- {{excluded_item}}
+## 4. Tasks
 
-### Constraints that shape the solution
+Repeat for every independently verifiable task.
 
-- {{constraint_and_source}}
+### Task {{n}} — {{title}}
 
-## 3. High-level architecture
+- **Objective:** {{what}}
+- **Reason:** {{why}}
+- **Expected output:** {{observable_output}}
+- **Files / systems:** {{affected_targets}}
+- **Verification:** `{{command_or_method}}` → {{expected_result}}
+- **Stop or replan condition:** {{material_trigger}}
+- **Dependencies:** {{dependencies_or_none}}
+- **Risks and controls:** {{risk_and_control}}
+- **Decision level:** `LEVEL_1_AUTONOMOUS / LEVEL_2_RECOMMENDED / LEVEL_3_USER_RESERVED`
 
-{{components_responsibilities_and_interfaces}}
+## 5. Testing and validation
 
-## 4. Implementation order
-
-Explain why this order controls dependencies and risk.
-
-{{ordering_rationale}}
-
-## 5. Task breakdown
-
-Repeat this section for every independently verifiable task.
-
-### Task {{n}} — {{task_title}}
-
-**Purpose:** {{why_this_task_exists}}
-**Files:** {{files_created_modified_or_deleted}}
-**Depends on:** {{dependencies_or_none}}
-**Produces:** {{observable_output_or_interface}}
-
-#### Changes
-
-1. {{exact_change}}
-2. {{exact_change}}
-
-#### Verification
-
-- **Command / inspection:** `{{verification_action}}`
-- **Expected result:** {{objective_success_condition}}
-
-#### Risks
-
-- {{risk_and_mitigation}}
-
-#### Done when
-
-- [ ] {{task_level_acceptance_criterion}}
-
-## 6. Testing strategy
-
-| Level | What it proves | Method / command | Expected evidence |
+| Requirement / risk | Method | Expected evidence | Independence level |
 |---|---|---|---|
-| {{level}} | {{claim}} | `{{method}}` | {{result}} |
+| {{claim}} | `{{method}}` | {{evidence}} | Internal / Actual checks / Cross-verification / Independent evaluation |
 
-## 7. Validation strategy
+## 6. Capability and permission plan
 
-Map every project-level success criterion to evidence.
+| Need | Capability / adapter | Why selected | Permissions | Cost / risk | Validation |
+|---|---|---|---|---|---|
+| {{need}} | {{capability}} | {{reason}} | {{permissions}} | {{cost_risk}} | {{check}} |
 
-| Success criterion | Validation method | Evidence to retain |
-|---|---|---|
-| {{criterion}} | {{method}} | {{evidence}} |
+## 7. Alternatives and trade-offs
 
-## 8. Alternatives and trade-offs
-
-| Approach | Advantages | Costs / risks | Decision |
+| Approach | Advantages | Costs / risks | Decision and authority |
 |---|---|---|---|
-| {{approach}} | {{advantages}} | {{costs}} | Chosen / Rejected / Deferred |
+| {{approach}} | {{advantages}} | {{costs}} | Chosen / Rejected / Deferred — {{authority}} |
 
-## 9. Potential pitfalls
+## 8. Failure recovery and rollback
 
-- {{pitfall_and_prevention}}
+- **Likely failure modes:** {{failures}}
+- **Diagnostic evidence:** {{evidence}}
+- **Substitution or degradation path:** {{path}}
+- **Operational rollback:** {{rollback}}
+- **Escalation trigger:** {{trigger}}
 
-## 10. Complexity
+## 9. Complexity and preparation budget
 
-**Overall:** Low | Medium | High
-**Reasoning:** {{complexity_drivers_and_uncertainty}}
+- **Budget:** `DEEP | CRITICAL`
+- **Complexity:** Low / Medium / High
+- **Drivers:** {{drivers}}
+- **Budget-change trigger:** {{trigger}}
 
-Complexity is a planning signal, not a promise of elapsed time unless the user
-explicitly requests a time estimate.
+Complexity is not an elapsed-time promise.
 
-## 11. Approval gate
+## 10. Approval gate
 
-- [ ] The plan matches the confirmed context brief.
-- [ ] Every task names its files, dependencies, output, and verification.
-- [ ] Testing and project-level validation are both covered.
-- [ ] Alternatives and trade-offs are visible.
+- [ ] Plan matches the confirmed context brief and Definition of Done.
+- [ ] Every task has objective, reason, output, verification, stop condition,
+      and dependencies.
+- [ ] Material decisions have the correct authority level.
+- [ ] Required permissions and risk acceptance are explicit.
+- [ ] Tests, project validation, recovery, and rollback are covered.
 - [ ] No blocking gap is hidden inside a task.
-- [ ] The user explicitly approved this plan.
+- [ ] The responsible user approved the plan.
 
-**Approval:** {{user_approval_or_pending}}
+**Gate state:** `PENDING | APPROVED | REJECTED | INVALIDATED`  
+**Approval evidence:** {{reference}}  
 **Approved at:** {{date_or_pending}}
 
-Do not modify implementation files while approval is pending.
+Do not modify or act externally while a required plan gate is pending or
+invalidated.
+

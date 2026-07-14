@@ -1,125 +1,152 @@
 # ShapingTheAxe
 
-> Shape the context before cutting the code.
+> Shape the decision before committing the cut.
 
-ShapingTheAxe is a public, tool-agnostic engineering framework for human-AI
-collaboration. It turns an AI from an eager implementation assistant into a
-project architect that searches for evidence, reduces uncertainty, validates
-its understanding, and only then plans and executes.
+ShapingTheAxe is a provider-independent framework for preparing, deciding,
+executing, verifying, and learning from AI-assisted work. It aims to maximize
+justified result quality while using the minimum total cost compatible with
+risk and the Definition of Done.
 
-This repository is not a collection of magic prompts. It is a repeatable and
-auditable working method.
+This is a manually executable beta, not a CLI, an agent platform, or a giant
+prompt.
 
 ## Status
 
-- **Framework milestone:** ShapingTheAxe `v0.1` has completed its first
-  independent reference validation and remains in development.
-- **Core protocol:** `context-init v0.2` is the validated baseline.
-- **Evidence:** the first independent reference case passed with **91.3/100**,
-  no hard failures, and a successful handoff.
-- **Canonical language:** English.
+- **Framework:** `0.2.0-beta.1`
+- **Brain Specification:** `0.2.0-beta.1`
+- **Portable kernel:** `0.2.0-beta.1`
+- **Status:** Beta under comparative validation
+- **Normative language:** English
+- **Normative semantic source:**
+  [`SHAPING_THE_AXE_BRAIN_SPEC.md`](SHAPING_THE_AXE_BRAIN_SPEC.md)
+- **Historical predecessor:** foundation `v0.1`, containing
+  `context-init v0.2`
 
-The framework and the protocol are versioned independently. A framework
-release can package a specific protocol version together with templates,
-evaluations, examples, and future tool adapters.
+Foundation `v0.1` remains immutable and separately versioned. This beta is a
+new protocol line; it does not silently rewrite the predecessor.
 
-## The problem
+## What changed from foundation `v0.1`
 
-AI-assisted development often starts too late in the process: the AI is asked
-to implement before it understands the goal, the existing system, the rules,
-or another collaborator's work. The resulting code may look plausible while
-solving the wrong problem or violating hidden constraints.
+- six context layers replace five fixed uncertainty sources as the canonical
+  model;
+- qualitative risk selects `MICRO`, `STANDARD`, `DEEP`, or `CRITICAL` effort;
+- human gates depend on materiality and decision authority;
+- the artificial five-percent threshold is removed;
+- compact records are allowed for small work while full artifacts remain;
+- capability selection, deferred learning, privacy, versioning, and rollback
+  now have explicit contracts;
+- the Brain Specification and operational kernel have separate roles.
 
-ShapingTheAxe moves the expensive thinking to the beginning. Its central claim
-is simple:
-
-> Implementation should begin only when the remaining uncertainty is too small
-> to change the chosen solution materially.
-
-## The five sources of uncertainty
-
-Every project is examined through the same five lenses:
-
-1. Goal and definition of done.
-2. Current state.
-3. Style and execution norms.
-4. External constraints.
-5. Collaborator contract.
-
-The lenses stay fixed. The number of questions does not. A well-documented
-project may require none; an ambiguous project may require several.
+See [`COHERENCE_DIAGNOSIS.md`](COHERENCE_DIAGNOSIS.md) for the complete
+migration rationale.
 
 ## Quick start
 
-1. Give your AI access to [ShapingTheAxe.md](ShapingTheAxe.md).
-2. Make the relevant project artifacts available: repository, specification,
-   documentation, issues, policies, and collaborator work.
-3. Instruct it: `Follow ShapingTheAxe.md and begin context-init.`
-4. Let it inspect the artifacts before answering questions.
-5. Confirm its understanding and approve its plan before implementation.
+1. Give a capable AI environment access to
+   [`ShapingTheAxe.md`](ShapingTheAxe.md).
+2. Supply the task and relevant artifacts.
+3. State the intervention you authorize: investigate, recommend, plan, modify,
+   execute, validate, audit, evaluate, or full cycle.
+4. Tell it: `Follow ShapingTheAxe.md for this task.`
+5. Let the kernel choose the minimum sufficient budget and gates.
 
-The protocol is designed to work with any sufficiently capable AI coding
-environment. It does not depend on Claude, Codex, a particular model, MCP, or a
-specific agent runtime.
+For small work, use [`templates/run-record.md`](templates/run-record.md). For
+deep work or handoff, use the separate context brief, implementation plan, and
+completion report.
 
-## Core workflow
+## Operating model
 
-1. **Load context:** search every available artifact first.
-2. **Discover:** ask only the minimum unanswered questions, one at a time.
-3. **Validate understanding:** summarize and obtain explicit confirmation.
-4. **Analyze gaps:** expose contradictions, risks, and hidden assumptions.
-5. **Plan:** produce a complete, verifiable implementation strategy.
-6. **Execute:** implement only after approval; return to discovery whenever new
-   uncertainty appears.
-7. **Review and complete:** prove the result against requirements and evidence.
+1. Classify task, authority, risk, and budget.
+2. Design inspection around decision-changing claims.
+3. Inspect before asking.
+4. Detect and control gaps and contradictions.
+5. Satisfy the understanding and plan gates required by risk.
+6. Execute inside approved scope and permissions.
+7. Verify with proportional independence.
+8. Close with evidence and defer learning decisions until after runtime.
 
 ## Repository structure
 
 ```text
 .
 ├── README.md
+├── framework.yaml
+├── SHAPING_THE_AXE_BRAIN_SPEC.md
 ├── ShapingTheAxe.md
+├── COHERENCE_DIAGNOSIS.md
+├── IMPLEMENTATION_PLAN.md
 ├── docs/
 │   ├── architecture.md
+│   ├── beta-architecture.md
 │   ├── roadmap.md
-│   └── validation-history.md
+│   └── state-model.md
+├── templates/
+│   ├── run-record.md
+│   ├── context-brief.md
+│   ├── implementation-plan.md
+│   └── completion-report.md
 ├── evaluation/
-│   └── rubric.md
-├── examples/
-│   └── ft_irc/
-│       ├── README.md
-│       └── evaluation.md
-└── templates/
-    ├── completion-report.md
-    ├── context-brief.md
-    └── implementation-plan.md
+│   ├── rubric.md
+│   └── beta-validation-protocol.md
+└── examples/
+    └── ft_irc/
+        └── README.md
 ```
 
-The repository includes one completed reference case as evidence. Tool-specific
-skills, agents, MCP integrations, translations, and the book remain
-deliberately outside the current foundation.
+No empty CLI, adapter, agent, MCP, capability, translation, or learning
+directories are included.
 
-## Design principles
+## Reference evidence
 
-- Search first. Ask second. Assume never.
-- Prefer evidence over confidence.
-- Ask the minimum number of high-value questions.
-- Make unknowns and contradictions visible.
-- Treat human confirmation and approval as hard gates.
-- Keep decisions traceable to an artifact or an explicit human answer.
-- Re-enter discovery when reality invalidates the plan.
-- Claim completion only with verification evidence.
+The historical `ft_irc` case is closed with `91.3/100`, verdict `PASS`, no hard
+failure, and a successful independent handoff. It is not Reference-grade. The
+audit is frozen and must not be repeated or reconstructed from this package.
+See [`examples/ft_irc/README.md`](examples/ft_irc/README.md).
 
-## Evidence so far
+## Validation
 
-`context-init v0.2` passed its first independent reference validation with
-**91.3/100**, no hard failures, and a successful handoff. This is the first
-evidence-backed baseline, not the destination: transfer tests across unfamiliar
-projects and richer product domains come next. The full result and its recorded
-limitations live in the [validation history](docs/validation-history.md).
+The beta is evaluated on:
 
-See [the architecture](docs/architecture.md) for the system boundaries and
-[the roadmap](docs/roadmap.md) for the validation sequence. Use the
-[conformance rubric](evaluation/rubric.md) to evaluate an actual protocol run
-and the [reference case record](examples/ft_irc/README.md) to inspect the first
-controlled validation.
+1. correctness;
+2. efficiency;
+3. traceability;
+4. useful autonomy;
+5. escalation quality;
+6. portability;
+7. clean learning.
+
+Use [`evaluation/rubric.md`](evaluation/rubric.md) for an individual run and
+[`evaluation/beta-validation-protocol.md`](evaluation/beta-validation-protocol.md)
+for comparisons with brainstorming and normal workflows.
+
+## Current exclusions
+
+The beta deliberately excludes:
+
+- CLI and executable state engine;
+- automatic agent orchestration;
+- custom MCP servers;
+- automated learning or core mutation;
+- large capability catalogs;
+- provider-specific packaged adapters;
+- translations not yet semantically reviewed;
+- universal-effectiveness claims;
+- generated book.
+
+Future ideas are labelled `PROPOSALS — NOT YET APPROVED` and are not beta
+requirements.
+
+## Translation policy
+
+The canonical source is English. A translation must declare its canonical
+source version and synchronization state. If a translation disagrees with the
+canonical specification, the English specification governs until the
+translation is corrected.
+
+## Rollback
+
+Operational rollback restores foundation `v0.1` or another complete stable
+package. Analytical rollback compares exact versions, inputs, run evidence,
+and evaluation results to locate a regression. Never copy selected beta rules
+back into the historical protocol.
+

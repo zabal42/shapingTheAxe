@@ -1,0 +1,48 @@
+framework:
+  name: ShapingTheAxe
+  version: 0.2.0-beta.1
+  status: beta
+  released: 2026-07-14
+
+normative:
+  language: English
+  semantic_source: SHAPING_THE_AXE_BRAIN_SPEC.md
+  specification_version: 0.2.0-beta.1
+  operational_kernel: ShapingTheAxe.md
+  kernel_version: 0.2.0-beta.1
+
+predecessor:
+  framework_version: v0.1
+  protocol: context-init
+  protocol_version: "0.2"
+  immutable: true
+  source_archive_sha256: 4ce99b3330271fdaf8ad6bfb8efaf77a198f1c022e5758ed0a8d7d17f912b93f
+
+contracts:
+  state_model: docs/state-model.md
+  compact_run_record: templates/run-record.md
+  context_brief: templates/context-brief.md
+  implementation_plan: templates/implementation-plan.md
+  completion_report: templates/completion-report.md
+  evaluation_rubric: evaluation/rubric.md
+  beta_validation: evaluation/beta-validation-protocol.md
+
+reference_cases:
+  ft_irc:
+    status: CLOSED
+    score: 91.3
+    verdict: PASS
+    reference_grade: false
+    rerun_allowed: false
+
+translations:
+  canonical_language: English
+  policy: synchronized-versioned
+  current_translations: []
+
+excluded_from_beta:
+  - cli
+  - automatic_agent_orchestration
+  - custom_mcp_servers
+  - automated_learning
+  - runtime_core_mutation

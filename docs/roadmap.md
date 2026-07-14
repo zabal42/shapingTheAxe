@@ -1,95 +1,102 @@
 # Roadmap
 
-The roadmap follows evidence, not a calendar. Each layer is built only after the
-layer beneath it can be demonstrated.
+The roadmap follows evidence rather than calendar dates. The beta remains
+small until repeated real failures justify more machinery.
 
-## Milestone 1 — Foundation
+## Milestone 0 — Historical foundation
 
-**Goal:** establish one canonical, tool-agnostic protocol and its persistent
-artifact contracts.
+**Status:** Closed and preserved.
 
-- [x] Define the product mission and primary audience.
-- [x] Establish English as the canonical language.
-- [x] Recover and formalize `context-init v0.2`.
-- [x] Define the context brief, implementation plan, and completion report.
-- [x] Document architectural boundaries and version separation.
-- [x] Complete a whole-foundation consistency review.
-- [ ] Choose and add an open-source license before the `v0.1` release.
+- [x] Establish foundation `v0.1` and `context-init v0.2`.
+- [x] Define context brief, plan, completion report, and conformance rubric.
+- [x] Execute the `ft_irc` reference case.
+- [x] Obtain `91.3/100`, `PASS`, no hard failure, and successful handoff.
+- [x] Record why the case is not Reference-grade.
+- [x] Freeze the audit and prohibit fixture modification or reconstruction.
 
-## Milestone 2 — Evaluation
+## Milestone 1 — Brain consolidation
 
-**Goal:** turn the framework's claims into observable pass or fail conditions.
+**Status:** Implemented in beta `0.2.0-beta.1`.
 
-- [x] Define hard-fail protocol violations.
-- [x] Create a scored evaluation rubric.
-- [x] Define a handoff test between independent AI instances.
-- [x] Define how evidence and unanswered questions are audited.
+- [x] Establish the Brain Specification as semantic authority.
+- [x] Preserve foundation `v0.1` as a separate immutable version.
+- [x] Replace five fixed sources with six canonical context layers and a
+      compatibility map.
+- [x] Replace universal gates with risk- and authority-sensitive gates.
+- [x] Remove the artificial five-percent threshold.
+- [x] Formalize risk, budget, execution, knowledge, capability, learning,
+      version, and completion states.
+- [x] Define English canonical source and synchronized translation policy.
+- [x] Separate approved decisions from unapproved proposals.
 
-## Milestone 3 — `ft_irc` reference case
+## Milestone 2 — Manual beta package
 
-**Goal:** validate the five-source model against a completed project with a
-formal specification, codebase, style rules, external constraints, and a real
-collaborator contract.
+**Status:** Implemented; structural verification required before release.
 
-- [x] Prepare a controlled input manifest.
-- [x] Execute `context-init v0.2` from a clean session.
-- [x] Preserve the execution report and supporting evidence.
-- [x] Evaluate the run independently with the rubric.
-- [x] Pass an independent handoff.
-- [x] Freeze the executor and evaluator conversations as evidence.
-- [x] Record limitations and protocol revision candidates.
+- [x] Produce portable kernel.
+- [x] Add compact run record.
+- [x] Align full artifacts with the state model.
+- [x] Add exact framework manifest and rollback provenance.
+- [x] Update conformance rubric for proportional gates.
+- [x] Define comparative beta validation.
+- [x] Keep CLI, agent automation, MCP, and automated learning excluded.
+- [ ] Complete release-package structural and semantic checks.
 
-**Outcome:** **91.3/100 — PASS**, no hard failures. Reference-grade was not
-reached because the complete chronological transcript is absent, the Planning
-to Full-cycle transition was not formally recorded, and `irssi` remains blocked
-by the environment. The case is closed; it will not be re-audited.
+## Milestone 3 — Comparative validation
 
-## Milestone 3.1 — Evidence hardening
+**Status:** Pending real beta runs.
 
-**Goal:** incorporate the reference-case lessons before increasing domain
-complexity, without retroactively changing the frozen run.
+- [ ] Freeze at least one unfamiliar existing-software case.
+- [ ] Freeze at least one new/architectural software case.
+- [ ] Freeze at least one non-software or mixed-domain case.
+- [ ] Compare ShapingTheAxe, brainstorming, and normal workflow on equivalent
+      inputs.
+- [ ] Retain actual outcomes, resource conditions, and user burden.
+- [ ] Run independent evaluation and clean handoff where applicable.
+- [ ] Evaluate correctness, efficiency, traceability, useful autonomy,
+      escalation quality, portability, and clean learning.
+- [ ] Perform adversarial novelty review.
+- [ ] Identify cases where another workflow is equal or better.
 
-- [ ] Decide whether the changes warrant `context-init v0.3`.
-- [ ] Define a durable chronological transcript or equivalent event-log
-  contract.
-- [ ] Require an explicit evaluation-mode declaration and transition record.
-- [ ] Standardize environment-blocked verification outcomes.
-- [ ] Add regression checks proving the changes preserve the successful
-  handoff behavior.
+Do not rerun `ft_irc` for this milestone.
 
-## Milestone 4 — Transfer tests
+## Milestone 4 — Beta revision or stabilization decision
 
-**Goal:** test whether the method generalizes beyond its origin.
+**Status:** Blocked on Milestone 3 evidence.
 
-- [ ] Run a blind test on an unfamiliar software project.
-- [ ] Apply the framework to the AI-powered WhatsApp chatbot project.
-- [ ] Compare question quality, missed constraints, plan quality, and handoff
-  success across cases.
+- [ ] Separate protocol, executor, provider, adapter, fixture, and environment
+      defects.
+- [ ] Revise qualitative budget anchors using observed disagreements.
+- [ ] Test non-regression against the objective function.
+- [ ] Narrow claims or scope where evidence requires it.
+- [ ] Perform independent release evaluation.
+- [ ] Choose promote, revise, narrow, rollback, or reject-claim outcome.
 
-The WhatsApp project is intentionally later: it introduces product, customer,
-integration, privacy, and operational uncertainty that `ft_irc` does not cover.
-The next decision gate is whether to complete Milestone 3.1 first or combine
-its changes with the blind transfer test; the WhatsApp case remains after that
-gate.
+No beta version becomes stable merely because its documents are complete.
 
-## Milestone 5 — Tool adapters
+## Milestone 5 — Optional portability work
 
-**Goal:** make the validated protocol convenient in specific environments
-without fragmenting its behavior.
+**Status:** Later; requires demonstrated need.
 
-- [ ] Define an adapter contract.
-- [ ] Package the kernel as skills or commands for selected AI tools.
-- [ ] Explore agents and subagents where task isolation adds measurable value.
-- [ ] Explore MCP integrations where external context retrieval is necessary.
-- [ ] Add conformance tests that compare adapters with the canonical protocol.
+- [ ] Produce a reviewed Spanish translation tied to a stable canonical
+      version.
+- [ ] Test a second capable provider/environment.
+- [ ] Define an adapter conformance case only if real adapter drift appears.
+- [ ] Create a capability registry only after repeated reusable capabilities
+      exist.
 
-## Milestone 6 — Knowledge product
+## Deferred proposals
 
-**Goal:** generate teaching and reference material from the working framework.
+The following remain unapproved and outside the beta:
 
-- [ ] Add field-tested examples and decision records.
-- [ ] Produce a Spanish translation from a tagged canonical release.
-- [ ] Generate the book from the protocol, architecture, evaluations, and cases.
+- CLI;
+- automated agent orchestration;
+- custom MCP implementation;
+- machine-readable state engine;
+- automated capability synthesis;
+- automated learning and promotion;
+- metrics dashboard;
+- generated book.
 
-The book documents proven practice. It does not define the framework ahead of
-the evidence.
+Each requires the problem, benefit, cost, risk, core impact, and validating
+experiment specified under `PROPOSALS — NOT YET APPROVED` before implementation.

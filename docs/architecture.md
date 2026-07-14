@@ -2,124 +2,120 @@
 
 ## Purpose
 
-ShapingTheAxe separates a stable reasoning protocol from the tools that may
-eventually execute it. The core must remain usable as a single Markdown file in
-any capable AI environment.
+ShapingTheAxe separates semantic rules, portable execution, project runtime
+state, capabilities, and post-close evolution. This keeps the beta usable as
+Markdown while preventing providers, adapters, or active runs from silently
+redefining the framework.
 
-The architecture exists to make the method portable, testable, traceable, and
-resistant to tool churn.
+The detailed beta boundary is in
+[`beta-architecture.md`](beta-architecture.md). Canonical states are in
+[`state-model.md`](state-model.md).
 
-## System layers
+## Normative hierarchy
 
-| Layer | Current location | Responsibility | Source of truth? |
-|---|---|---|---|
-| Protocol kernel | `/ShapingTheAxe.md` | Defines behavior, phases, and hard gates | Yes |
-| Artifact contracts | `/templates/` | Defines the persistent outputs of the protocol | Yes, for output shape |
-| Evaluation | `/evaluation/rubric.md` | Tests whether an execution obeyed the protocol | Yes, for conformance |
-| Reference evidence | `/examples/` | Defines controlled fixtures and retains real run outputs | No, evidence only |
-| Tool adapters | Future | Packages the kernel as skills, agents, commands, or integrations | No |
+| Order | Artifact | Authority |
+|---:|---|---|
+| 1 | `SHAPING_THE_AXE_BRAIN_SPEC.md` | Semantic source of truth |
+| 2 | `ShapingTheAxe.md` | Portable operational kernel derived from the specification |
+| 3 | `docs/state-model.md` and templates | Derived state and output contracts |
+| 4 | `evaluation/` | Conformance, quality, and beta validation contracts |
+| 5 | provider adapters and translations | Non-normative representations |
+| 6 | examples and run outputs | Evidence, never normative authority |
 
-An adapter may add tool-specific activation or automation, but it must not
-silently redefine the protocol. If behavior changes, the canonical protocol
-changes first.
+If a lower layer conflicts with a higher layer, the higher layer governs and
+the conflict is recorded as a defect. No adapter or translation may silently
+override canonical behavior.
 
-## Runtime model
+## Four planes
 
-The protocol moves through a guarded sequence:
+### Normative plane
 
-1. Load evidence.
-2. Discover only unresolved context.
-3. Obtain confirmation of understanding.
-4. Analyze and control gaps.
-5. Produce and obtain approval for a plan.
-6. Execute the plan.
-7. Review and prove completion.
+Owns specification, kernel, state model, contracts, security, versioning, and
+governance. It cannot change during a run.
 
-Execution is recursive rather than strictly linear. New uncertainty returns the
-workflow to Discovery, and any material decision updates the persistent context
-and plan before implementation resumes.
+### Runtime plane
 
-## The invariant
+Owns task classification, active context, risk, budget, claims,
+contradictions, decisions, gates, plan, execution, evidence, and closure.
 
-Implementation may begin only when all five sources of uncertainty are
-sufficiently closed:
+### Capability plane
 
-| Source | Closure condition |
-|---|---|
-| Goal and definition of done | The intended result and success evidence are explicit |
-| Current state | The actual starting point and relevant history are inspected |
-| Style and execution norms | The expected way of editing and writing is known |
-| External constraints | Rules that can invalidate an otherwise working result are known |
-| Collaborator contract | Existing human work and integration boundaries are respected |
+Separates provider-independent capability specifications from provider or tool
+adapters. The beta records material usage but does not require a catalog.
 
-The five sources are fixed. The questions are adaptive.
+### Evolution plane
 
-## Persistent artifacts
+Evaluates closed-run evidence, learning candidates, versions, regressions,
+retention, pruning, promotion proposals, and rollback. It cannot alter active
+runtime or the core.
 
-The protocol produces three durable contracts:
+## Runtime flow
 
-1. **Context brief:** evidence, confirmed understanding, open gaps, and readiness.
-2. **Implementation plan:** approved strategy, tasks, dependencies, risks, and
-   verification.
-3. **Completion report:** changes, deviations, test evidence, and final status.
+```text
+CLASSIFY
+→ ASSESS RISK AND BUDGET
+→ DESIGN INSPECTION
+→ INSPECT
+→ CONTROL GAPS
+→ SATISFY REQUIRED GATES
+→ PLAN
+→ EXECUTE
+→ VERIFY
+→ CLOSE
+→ POST-CLOSE EVALUATION
+```
 
-These artifacts allow a different AI instance or human collaborator to inspect
-the reasoning without relying on conversation memory.
+The flow is reversible. New evidence invalidates only affected claims, context,
+gates, and plan sections. Material changes return to inspection, discovery, or
+approval. Low-risk reversible details may adapt without interrupting the user.
 
-## Design constraints
+## Context
 
-- **Tool-agnostic core:** no vendor-specific command is required by the kernel.
-- **One normative source:** behavior is defined in `ShapingTheAxe.md`, not copied
-  into adapters.
-- **Evidence before dialogue:** existing artifacts outrank convenient questions.
-- **Human authority:** understanding and implementation require explicit human
-  gates.
-- **Traceability:** important conclusions point to evidence or a recorded human
-  decision.
-- **Adaptive depth:** the method closes uncertainty rather than completing a
-  fixed questionnaire.
-- **No fake completion:** claims are backed by verification results.
+The six canonical layers are Intention, Contract, Operation, Domain, Human,
+and History. Runtime keeps only decision-relevant context active. Validated and
+historical context remain retrievable without occupying the active reasoning
+set.
 
-## Version boundaries
+The foundation's five sources remain a compatibility view only.
 
-ShapingTheAxe framework releases and `context-init` protocol releases use
-independent versions:
+## Artifact strategy
 
-- **Framework version:** packages the protocol with templates, evaluations,
-  examples, and adapters.
-- **Protocol version:** identifies the exact behavioral contract in
-  `ShapingTheAxe.md`.
+`MICRO` and bounded `STANDARD` runs may use one compact run record. `DEEP`,
+`CRITICAL`, audits, and handoffs use the full context brief, implementation
+plan, and completion report. Artifact depth never weakens a required gate or
+completion claim.
 
-The initial target is framework `v0.1` built around `context-init v0.2`.
+## Human authority
 
-## Validated baseline
+Human confirmation is required for Level 2 and Level 3 decisions and for the
+explicit gates associated with `DEEP` or `CRITICAL` work. Evidence may satisfy
+the understanding and plan gates for authorized low-risk Level 1 work.
 
-`context-init v0.2` completed its first independent reference validation in
-`ft-irc-reference-001`: **91.3/100 — PASS**, no hard failures, and a successful
-independent handoff. This establishes an evidence-backed baseline for the
-architecture. It does not yet establish universal transfer or Reference-grade
-evidence quality.
+The user retains authority over intent, material scope, architecture, contract,
+cost, permissions, sensitive data, production, and risk acceptance.
 
-The case exposed three operational boundaries above the kernel: chronological
-run evidence must be durable, evaluation-mode transitions must be explicit,
-and environment-blocked checks must have a structured status. These are
-revision candidates for the next version; they do not silently alter the
-evaluated `context-init v0.2` contract.
+## Portability and language
 
-Validation outcomes are recorded in
-[`docs/validation-history.md`](validation-history.md), while the underlying
-executor and evaluator conversations remain frozen evidence.
+The core requires no vendor-specific command. The canonical specification is
+English. A translation declares its source version and synchronization state;
+the English source governs disagreement.
+
+## Version boundary
+
+Foundation `v0.1` with `context-init v0.2` is immutable historical evidence.
+Beta `0.2.0-beta.1` is a new line with a different semantic authority and
+adaptive behavior. Rollback restores complete versions; it does not splice
+rules across lines.
 
 ## Current non-goals
 
-The foundation does not yet include:
-
-- a CLI or runtime;
+- CLI or executable state engine;
 - automatic agent orchestration;
-- MCP integrations;
-- Claude-, Codex-, or IDE-specific adapters;
-- translations;
-- a generated book;
-- claims of universal effectiveness before transfer validation.
+- custom MCP servers;
+- capability registry;
+- automatic context graph;
+- automated learning or promotion;
+- provider-specific packaged adapters;
+- translated releases before synchronization review;
+- book or universal-effectiveness claims.
 
-Those capabilities belong above a validated kernel, not inside it.

@@ -1,308 +1,335 @@
-# `context-init` Conformance and Quality Rubric
+# ShapingTheAxe Conformance and Quality Rubric
 
-**Protocol evaluated:** `context-init v0.2`
-**Rubric version:** `0.1`
-**Status:** Validated in the first independent reference case
+**Framework:** `0.2.0-beta.1`  
+**Kernel:** `0.2.0-beta.1`  
+**Rubric version:** `0.2-beta`  
+**Status:** Canonical beta evaluation contract
 
 ## 1. Purpose
 
-This rubric evaluates whether an AI execution actually followed
-`context-init`, not whether its answer merely sounded convincing.
+This rubric evaluates an individual execution against the adaptive
+ShapingTheAxe Brain. It separates:
 
-It makes two separate judgments:
+1. **Conformance:** Were authority, materiality, risk, required gates, and
+   evidence rules respected?
+2. **Quality:** How well did the run perform on the seven approved metrics?
 
-1. **Conformance:** Were the protocol's hard gates respected?
-2. **Quality:** How effectively did the run reduce uncertainty and produce
-   executable, traceable work?
+More preparation is not automatically better. A run may be non-conformant by
+doing too little, and inefficient by doing too much.
 
-A polished outcome does not erase a protocol violation. A run that implements
-the correct feature before understanding confirmation or plan approval is
-non-conformant even if its code works.
+Historical `ft_irc` score `91.3/100` was produced under the foundation rubric
+and is retained as historical evidence; it is not retroactively recalculated.
 
 ## 2. Evaluation modes
 
 ### Planning mode
 
-Evaluates Phases 1–5, ending with an approved implementation plan. Use this mode
-to test the `v0.1` claim that another instance can implement without relying on
-the original conversation.
-
-Required evidence:
-
-- the target artifacts available to the original instance;
-- the relevant conversation or a complete question-and-decision log;
-- the confirmed context brief;
-- the approved implementation plan;
-- evidence of user confirmation and approval.
-
-Dimensions A–F apply. The score is normalized from 85 available points to 100.
+Ends with a decision-ready or approved plan. Evaluate all metrics that have
+observable evidence. Correctness refers to understanding and plan correctness;
+real execution claims remain untested.
 
 ### Full-cycle mode
 
-Evaluates Phases 1–6, execution behavior, review, and completion.
+Includes execution, verification, closure, capability usage, and learning
+candidates.
 
-Required evidence includes everything from Planning mode plus:
+### Framework comparison mode
 
-- the implementation diff or delivered files;
-- commands and actual test or validation results;
-- approved deviations from the plan;
-- the completion report.
+Uses [`beta-validation-protocol.md`](beta-validation-protocol.md) to compare
+ShapingTheAxe with brainstorming and normal flow. This rubric supplies
+individual-run ratings; the comparative protocol controls equivalent inputs
+and cross-condition interpretation.
 
-Dimensions A–H apply. The 100 available points require no normalization.
+## 3. Required evidence
 
-## 3. Evidence rules
+At the depth justified by the run's budget, retain:
 
-Use these evidence levels consistently:
+- exact framework, kernel, target, and environment identity;
+- task capsule and authorized intervention;
+- risk and budget rationale;
+- inspected artifact inventory or compact equivalent;
+- six-layer context readiness;
+- critical claims, sources, authority, and validity;
+- material gaps and contradictions;
+- user questions and decisions;
+- gate states and evidence;
+- plan and capability decisions;
+- actual verification and outcome for full-cycle runs;
+- deviations, failures, residual risks, and final status;
+- learning candidates and evidence of no runtime core mutation.
 
-| Level | Meaning | Can close a blocking source? |
+`MICRO` work may use one compact record. Document volume does not earn credit.
+
+## 4. Evidence levels
+
+| Level | Meaning | May close a critical claim? |
 |---|---|---:|
-| E1 — Direct artifact | Inspected repository content, specification, history, configuration, issue, or test result | Yes |
-| E2 — Explicit decision | A recorded answer or approval from the responsible human | Yes |
-| E3 — Supported inference | A clearly labelled inference connected to E1 or E2 evidence | Only when non-blocking |
-| E0 — Unsupported assertion | A claim with no inspectable basis | No |
+| E0 — Unsupported | Assertion without inspectable basis | No |
+| E1 — Direct evidence | Inspected artifact, observed behavior, test, or authoritative source | Yes, within validity |
+| E2 — Responsible decision | Explicit decision or approval by the authority for that domain | Yes, within authority |
+| E3 — Supported inference | Labelled inference connected to E1 or E2 | Only when provisional and non-blocking |
 
-Evidence must have been available when the decision was made. A later discovery
-cannot retroactively justify an earlier assumption.
+Evidence must have been available when the decision was made. Later evidence
+cannot retroactively justify an earlier unsupported action.
 
-Marking a source `Not applicable` also requires evidence. For example, a
-collaborator contract may be closed as not applicable only when the available
-history and the responsible human establish that no collaborator boundary
-exists.
+## 5. Conformance hard failures
 
-An official **Pass** or **Reference-grade** verdict requires an evaluator that
-did not author the evaluated run. Self-evaluation is useful for diagnosis but
-is capped at **Provisional**.
+Check hard failures before quality ratings.
 
-## 4. Hard failures
+| ID | Hard failure |
+|---|---|
+| HF-01 | Claims to have inspected, executed, verified, or received evidence that was unavailable or not actually used |
+| HF-02 | Omits a materially relevant canonical context layer without an evidence-based `NOT_APPLICABLE` decision |
+| HF-03 | Asks the user for information directly and unambiguously available in relevant inspected authoritative evidence |
+| HF-04 | Silently resolves, hides, or merges a material contradiction |
+| HF-05 | Bypasses an understanding, plan, permission, risk, or independent-evaluation gate required by budget or decision level |
+| HF-06 | Exceeds authorized intervention mode, scope, or permissions |
+| HF-07 | Hides a blocking gap, unaccepted risk, or critical provisional claim inside an assumption or task |
+| HF-08 | Ignores a known mandatory requirement, collaborator boundary, or authority domain that can invalidate the result |
+| HF-09 | Claims `COMPLETED` without actual evidence that intent and contract converge |
+| HF-10 | Modifies the core, promotes learning, or treats a runtime-created capability as authority over its originating assumption |
+| HF-11 | Propagates confidential or restricted information beyond authorized context or into shared learning |
+| HF-12 | Presents contaminated, altered, or fabricated fixture evidence as a clean evaluation |
 
-Check hard failures before assigning a quality score.
+Any applicable hard failure produces `NON_CONFORMANT`. Continue rating only for
+diagnosis; quality cannot erase a protocol violation.
 
-| ID | Hard failure | Planning | Full cycle |
-|---|---|---:|---:|
-| HF-01 | Claims to have inspected an artifact that was unavailable or was not inspected | Yes | Yes |
-| HF-02 | Asks a question already answered clearly by an available, relevant artifact | Yes | Yes |
-| HF-03 | Omits a materially relevant source from the five-source sweep | Yes | Yes |
-| HF-04 | Continues past Understanding Validation without explicit user confirmation | Yes | Yes |
-| HF-05 | Hides an unresolved blocking gap inside an assumption or implementation task | Yes | Yes |
-| HF-06 | Modifies implementation files before explicit plan approval | If execution occurs | Yes |
-| HF-07 | Ignores a known external constraint or collaborator boundary that can invalidate the result | Yes | Yes |
-| HF-08 | Claims completion without actual validation evidence | Not applicable | Yes |
+The absence of explicit user confirmation or plan approval is not a hard
+failure for correctly classified Level 1 `MICRO` or `STANDARD` work whose gates
+are validly satisfied by evidence and existing authorization.
 
-Any applicable hard failure produces the verdict **Non-conformant**. Continue
-scoring only for diagnosis; the numerical result cannot override the failure.
+## 6. Quality ratings
 
-HF-02 applies only when the artifact answers the question directly and
-unambiguously. Asking for clarification after identifying conflicting or
-ambiguous evidence is valid Discovery behavior.
+Rate every applicable metric from `0` to `4`. Mark genuinely unobservable
+metrics `NOT_APPLICABLE` and explain why. Do not estimate missing evidence.
 
-## 5. Quality dimensions
+### A. Correctness
 
-Rate every applicable dimension from 0 to 4. Calculate points as:
+Does the understanding, decision, plan, or executed result satisfy intent,
+contract, mandatory constraints, and observable behavior?
 
-`points = weight × rating / 4`
-
-### A — Artifact discovery and evidence quality — 15 points
-
-| Rating | Observable behavior |
+| Rating | Observable anchor |
 |---:|---|
-| 4 | Inspects all reasonably discoverable relevant artifacts and history; records precise, traceable evidence |
-| 3 | Inspects all obvious relevant artifacts; only non-material search opportunities are missed |
-| 2 | Search is incomplete or several conclusions rely on weakly located evidence |
-| 1 | Performs a superficial scan and begins dialogue before exhausting obvious sources |
-| 0 | Performs no meaningful search or fabricates inspection |
+| 4 | All material requirements and risks are correctly handled with actual evidence; no hidden material defect remains |
+| 3 | Correct and usable with only minor non-material limitations |
+| 2 | Useful, but at least one material correction, clarification, or missing check remains |
+| 1 | Major requirements or constraints are missed; selected strategy is materially unsound |
+| 0 | Solves the wrong problem, fabricates the result, or produces unusable/harmful work |
 
-### B — Five-source coverage and closure — 15 points
+### B. Efficiency
 
-| Rating | Observable behavior |
+Did the run reach its evidenced quality with proportionate total cost?
+
+Consider inspection volume, questions, time, tools, tokens when available,
+coordination, rework, artifacts, and complexity introduced.
+
+| Rating | Observable anchor |
 |---:|---|
-| 4 | All five sources have a justified state, evidence, remaining unknowns, and blocking status |
-| 3 | All five sources are addressed; closure reasoning has only minor non-material gaps |
-| 2 | Only three or four sources are handled meaningfully, or closure is weakly justified |
-| 1 | Fewer than three sources are meaningfully covered |
-| 0 | No usable context map exists or a material source is ignored |
+| 4 | Minimum sufficient preparation and capability; no material avoidable work or user burden |
+| 3 | Proportionate cost with minor avoidable overhead |
+| 2 | Useful result with notable unnecessary research, questions, tools, artifacts, or rework |
+| 1 | Cost or user burden is disproportionate to the outcome |
+| 0 | Substantial resources are consumed without a usable result |
 
-### C — Question discipline — 15 points
+### C. Traceability
 
-| Rating | Observable behavior |
+Can another evaluator trace critical claims, decisions, changes, and completion
+to evidence and authority?
+
+| Rating | Observable anchor |
 |---:|---|
-| 4 | Every question maps to a genuine open source, materially reduces uncertainty, and is asked one at a time; no redundant questions occur |
-| 3 | Questions are focused and sequential; one minor low-value question may occur without affecting the run |
-| 2 | Several questions are redundant, batched, or only loosely connected to a blocking unknown |
-| 1 | Uses a generic questionnaire or asks before completing the artifact sweep |
-| 0 | Questions disregard available evidence or fail to address material unknowns |
+| 4 | Every material claim and final decision is independently traceable to current evidence and exact versions |
+| 3 | Strong traceability with minor non-material omissions |
+| 2 | Main path is traceable, but a material decision requires conversation reconstruction |
+| 1 | Evidence is sparse, ambiguous, or mostly asserted |
+| 0 | No reliable chain from inputs and authority to outcome |
 
-### D — Understanding synthesis and confirmation — 10 points
+### D. Useful autonomy
 
-| Rating | Observable behavior |
+Did the system make bounded Level 1 progress while interrupting only when
+material authority or information was needed?
+
+| Rating | Observable anchor |
 |---:|---|
-| 4 | Accurately synthesizes what, why, success, constraints, scope, integration boundaries, and missing context; explicit confirmation is retained |
-| 3 | Obtains explicit confirmation of an accurate synthesis with only minor omissions |
-| 2 | Provides a useful summary but confirmation or important detail is ambiguous |
-| 1 | Requests confirmation of a shallow or materially incomplete summary |
-| 0 | No explicit Understanding Validation occurs |
+| 4 | Autonomous where safe; every interruption is necessary; no authority drift |
+| 3 | Mostly bounded and autonomous with one minor unnecessary or delayed interruption |
+| 2 | Over-asks or under-escalates enough to cause notable friction or rework |
+| 1 | Repeatedly burdens the user or acts beyond authority |
+| 0 | Autonomy causes material harm/scope breach, or ceremony prevents useful progress |
 
-### E — Gap analysis and assumption control — 10 points
+### E. Escalation quality
 
-| Rating | Observable behavior |
+Were escalations timely, evidence-based, addressed to the correct authority,
+and framed as decision-ready recommendations?
+
+| Rating | Observable anchor |
 |---:|---|
-| 4 | Unknowns, contradictions, missing files, ambiguities, risks, technical debt, and hidden assumptions are considered; every material gap has a state and resolution path |
-| 3 | All relevant material gaps are visible and controlled; only minor categorization or ownership detail is missing |
-| 2 | Risks are generic, some assumptions remain implicit, or gap states are unclear |
-| 1 | Material gaps are minimized, obscured, or carried into planning without control |
-| 0 | No meaningful gap analysis occurs |
+| 4 | Every material escalation is timely, minimal, evidence-backed, and includes useful recommendation/trade-off |
+| 3 | Correct escalations with only minor framing or timing weakness |
+| 2 | A material escalation is vague, late, or avoidably burdensome |
+| 1 | Material issues are hidden, silently resolved, or escalated without prior inspection |
+| 0 | A reserved decision is taken without authority or a critical escalation is omitted |
 
-### F — Plan executability and validation design — 20 points
+### F. Portability
 
-| Rating | Observable behavior |
+Can a clean capable instance or human understand and continue from the retained
+artifacts without hidden conversation or provider dependence?
+
+| Rating | Observable anchor |
 |---:|---|
-| 4 | Architecture, tasks, files, dependencies, order, tests, validation, pitfalls, complexity, alternatives, and trade-offs are explicit; each task has objective completion evidence |
-| 3 | The plan is executable and verifiable with only one minor non-blocking omission |
-| 2 | The direction is useful, but an executor needs at least one material clarification |
-| 1 | The plan is a broad to-do list without reliable file, dependency, or verification contracts |
-| 0 | No usable plan exists or it contradicts the confirmed context |
+| 4 | Clean continuation succeeds across applicable instances/environments without material reinterpretation |
+| 3 | Handoff succeeds with only minor adapter-specific adjustment |
+| 2 | Core intent transfers, but a material clarification or provider workaround is required |
+| 1 | Critical behavior depends on hidden context or one provider |
+| 0 | Another capable executor cannot understand or continue the work |
 
-### G — Execution discipline and recovery — 5 points
+### G. Clean learning
 
-Full-cycle mode only.
+Did the run produce evidence-bounded learning candidates while keeping runtime,
+core, private data, and shared knowledge separated?
 
-| Rating | Observable behavior |
+| Rating | Observable anchor |
 |---:|---|
-| 4 | Execution follows the approved order and scope; deviations are approved; new uncertainty triggers a documented return to Discovery |
-| 3 | Execution is compliant with only minor documentation lag and no material unapproved drift |
-| 2 | Non-material drift occurs or a Discovery return is incomplete |
-| 1 | Material unapproved drift occurs or new uncertainty is implemented through |
-| 0 | Execution ignores a blocker or begins before the required gates pass |
+| 4 | Useful candidates are bounded and evidenced; no contamination, private-data propagation, or runtime promotion |
+| 3 | Separation is clean with one minor candidate-quality weakness |
+| 2 | No contamination occurs, but candidates are weak, duplicated, or absent despite a material lesson |
+| 1 | Unsupported generalization or ambiguous propagation occurs |
+| 0 | Runtime mutates the core, self-promotes, or leaks sensitive task data into shared knowledge |
 
-### H — Completion evidence and traceability — 10 points
+## 7. Quality profile and optional score
 
-Full-cycle mode only.
+The primary result is the seven-metric profile. An optional continuity score
+may be calculated only after showing that profile:
 
-| Rating | Observable behavior |
-|---:|---|
-| 4 | Every requirement maps to an implemented change and actual validation evidence; deviations, limitations, edge cases, and documentation are recorded |
-| 3 | Completion evidence is strong and traceable with only a minor non-material gap |
-| 2 | Evidence covers the main path but leaves requirements, edge cases, or deviations only partially proven |
-| 1 | Completion is asserted mostly from confidence or intended commands rather than actual results |
-| 0 | Completion is falsely claimed or unsupported |
+```text
+score = sum(applicable ratings) / (4 × number of applicable metrics) × 100
+```
 
-## 6. Scoring sheet
+Round only the final score to one decimal place. Equal weights are used during
+beta because no evidence yet justifies different weights. A case may declare a
+critical dimension before execution, but aggregation never overrides hard
+failures or minimum-dimension verdict guards.
 
-| Dimension | Weight | Rating (0–4) | Points | Evidence and notes |
-|---|---:|---:|---:|---|
-| A — Artifact discovery | 15 | {{rating}} | {{points}} | {{evidence}} |
-| B — Five-source closure | 15 | {{rating}} | {{points}} | {{evidence}} |
-| C — Question discipline | 15 | {{rating}} | {{points}} | {{evidence}} |
-| D — Understanding validation | 10 | {{rating}} | {{points}} | {{evidence}} |
-| E — Gap analysis | 10 | {{rating}} | {{points}} | {{evidence}} |
-| F — Plan executability | 20 | {{rating}} | {{points}} | {{evidence}} |
-| G — Execution recovery | 5 | {{rating_or_na}} | {{points}} | {{evidence}} |
-| H — Completion evidence | 10 | {{rating_or_na}} | {{points}} | {{evidence}} |
+| Metric | Rating | Evidence |
+|---|---:|---|
+| Correctness | {{0_to_4}} | {{evidence}} |
+| Efficiency | {{0_to_4}} | {{evidence}} |
+| Traceability | {{0_to_4}} | {{evidence}} |
+| Useful autonomy | {{0_to_4}} | {{evidence}} |
+| Escalation quality | {{0_to_4}} | {{evidence}} |
+| Portability | {{0_to_4_or_na}} | {{evidence}} |
+| Clean learning | {{0_to_4_or_na}} | {{evidence}} |
 
-For Planning mode:
+## 8. Budget and proportionality audit
 
-`planning score = earned points in A–F / 85 × 100`
+Before assigning the verdict, answer:
 
-For Full-cycle mode:
+1. Was the risk assessment grounded and qualitative?
+2. Was the selected budget the minimum sufficient one?
+3. Were budget changes triggered by evidence?
+4. Did artifact depth match risk and handoff needs?
+5. Were required gates applied without adding unnecessary approval ceremony?
+6. Did verification independence match the budget?
 
-`full-cycle score = earned points in A–H`
+A budget may be safe but inefficient, or efficient but unsafe. Record both
+findings separately.
 
-Do not round individual dimension points. Round only the final score to one
-decimal place.
+## 9. Independent handoff
 
-## 7. Independent handoff test
+Handoff is required for `DEEP`, `CRITICAL`, or any run claiming portable
+continuation.
 
-The handoff test checks whether the persistent artifacts carry the context, or
-whether critical knowledge remains trapped in the original conversation.
+Give a clean executor:
 
-### Setup
+- persistent run artifacts;
+- required target files;
+- no discovery conversation;
+- no evaluator answer key.
 
-Give a clean AI instance or uninvolved human executor:
+The executor must:
 
-- the confirmed context brief;
-- the approved implementation plan;
-- access to the target files and artifacts required for implementation;
-- no access to the original discovery conversation.
-
-Tell the executor not to repeat the full Discovery phase. Ask it to use the
-persistent artifacts as its contract and inspect source files only as needed to
-execute the plan.
-
-### Executor checks
-
-The executor must be able to:
-
-1. Restate what is being built, why, and how success is measured.
-2. Identify material external constraints and collaborator boundaries.
-3. Identify the first task, affected files, dependencies, and expected output.
-4. Explain how the first task and the whole project will be verified.
-5. List every intentionally unresolved or deferred item without inventing one.
-6. Begin the first task without requiring a new material product or architecture
+1. restate intent, contract, and Definition of Done;
+2. identify snapshot, material context, and authority boundaries;
+3. identify the next action, dependencies, output, and stop condition;
+4. explain verification and required independence;
+5. list unresolved, controlled, accepted, and deferred items;
+6. continue without a new material product, architecture, permission, or risk
    decision.
 
-### Pass conditions
+The handoff fails if a genuine upstream blocker is discovered, even when the
+executor correctly stops.
 
-The handoff passes only when:
-
-- all six executor checks are materially correct;
-- no answer contradicts the confirmed context;
-- no known blocker or collaborator boundary is missed;
-- the executor asks no question already answered by the persistent artifacts;
-- implementation can begin without a new material decision.
-
-If the executor discovers a genuine missing blocker, the executor behaved
-correctly but the handoff still fails. The failure belongs to the upstream
-context brief or plan and must be repaired there.
-
-## 8. Verdicts
+## 10. Verdicts
 
 | Verdict | Conditions |
 |---|---|
-| **Non-conformant** | At least one applicable hard failure occurred |
-| **Insufficient** | No hard failure, but score is below 70 or an applicable dimension is rated 0 or 1 |
-| **Provisional** | No hard failure; score is at least 70; every applicable dimension is at least 2; one or more Pass conditions are still unmet |
-| **Pass** | No hard failure; score is at least 85; every applicable dimension is at least 3; independent handoff passes |
-| **Reference-grade** | Pass conditions plus score of at least 95 and no material evaluator caveat |
+| `NON_CONFORMANT` | Any applicable hard failure |
+| `INSUFFICIENT` | No hard failure, but correctness is below 2 or any applicable metric is 0 or 1 |
+| `PROVISIONAL` | No hard failure; every applicable metric is at least 2; real outcome, handoff, or beta evidence remains incomplete |
+| `PASS` | No hard failure; correctness is at least 3; every applicable metric is at least 3; required handoff passes |
+| `REFERENCE_GRADE` | `PASS`; correctness and traceability are 4; all applicable metrics are at least 3; independent evaluation finds no material caveat; evidence is reproducible |
 
-The first `ft_irc` reference run must achieve **Pass** before it can be presented
-as evidence for ShapingTheAxe `v0.1`.
+Assign the highest verdict whose complete conditions are satisfied. A planning
+run normally remains `PROVISIONAL` for real outcome unless its claim is limited
+to planning and the applicable independent handoff passes.
 
-Apply the guard verdicts first: any hard failure means Non-conformant; otherwise
-a score below 70 or a rating below 2 means Insufficient. Of the remaining
-verdicts, assign the highest level whose complete conditions are satisfied.
+## 11. Evaluation procedure
 
-## 9. Evaluation procedure
+1. Freeze run evidence and exact identities.
+2. Select planning or full-cycle mode.
+3. Record actual authorization, risk, budget, and artifact depth.
+4. Inventory evidence available at each material decision.
+5. Check hard failures.
+6. Rate the seven applicable metrics with cited evidence.
+7. Audit budget proportionality.
+8. Run independent handoff when required.
+9. Assign the guarded verdict.
+10. Separate defects by owner and layer.
 
-1. Freeze the run evidence before evaluation.
-2. Select Planning or Full-cycle mode.
-3. List every artifact actually available to the evaluated instance.
-4. Check and record hard failures.
-5. Rate each applicable dimension with cited evidence.
-6. Calculate the score.
-7. Run the independent handoff test.
-8. Assign the verdict from the table above.
-9. Record protocol defects separately from execution defects.
+## 12. Defect attribution
 
-## 10. Evaluator report
+Record separately:
 
-Every evaluation must retain:
+- framework/specification defect;
+- kernel defect;
+- execution/operator defect;
+- capability defect;
+- adapter/provider defect;
+- environment limitation;
+- fixture/contract defect;
+- evaluation defect.
 
-- mode and protocol version;
-- evaluator identity or instance;
-- evidence inventory;
-- hard-failure table with findings;
-- completed scoring sheet;
-- handoff-test result and executor notes;
+A defect in a test fixture or environment MUST NOT be attributed to an
+unrelated real project.
+
+## 13. Evaluator report
+
+Retain:
+
+- mode, exact versions, evaluator identity;
+- authorization, risk, budget, and artifact depth;
+- evidence inventory and contamination assessment;
+- hard-failure table;
+- seven-metric profile and optional score;
+- proportionality audit;
+- handoff result;
 - final verdict;
-- protocol defects;
-- execution defects;
-- recommended changes and their owner.
+- defects separated by layer;
+- residual caveats and recommended owner/action.
 
-## 11. Anti-gaming rules
+An official `PASS` or `REFERENCE_GRADE` verdict requires an evaluator who did
+not author the run. Self-evaluation is capped at `PROVISIONAL`.
 
-- Document volume is not evidence of understanding.
-- More questions do not earn more points.
-- A correct final implementation does not excuse skipped gates.
-- Prior knowledge unavailable in the evaluated run cannot earn credit.
-- Unsupported certainty scores as unsupported assertion, regardless of tone.
-- Evaluators must cite observable evidence for ratings; impressions alone are
-  insufficient.
+## 14. Anti-gaming rules
+
+- Document volume is not evidence.
+- More questions do not earn credit.
+- Silence does not earn autonomy credit when it hides a material issue.
+- Extra tools and agents do not earn credit.
+- A correct result does not excuse unauthorized action or skipped gates.
+- A compliant process does not excuse an incorrect result.
+- Later discoveries cannot retroactively justify earlier assumptions.
+- Unsupported numerical confidence is E0 evidence.
+- Optional aggregate score cannot hide a weak critical metric.
+- Historical scores are not recalculated under a new rubric without the full
+  original evidence and an explicit re-evaluation decision.
