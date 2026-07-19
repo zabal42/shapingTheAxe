@@ -1,6 +1,6 @@
 # ShapingTheAxe Brain Specification
 
-**Specification version:** `0.2.0-beta.1`  
+**Specification version:** `0.2.0-beta.2`
 **Status:** Beta normative specification  
 **Normative language:** English  
 **Normative source:** This file  
@@ -10,7 +10,7 @@
 ## Normative status and language
 
 This document is the semantic source of truth for ShapingTheAxe
-`0.2.0-beta.1`. The operational kernel, templates, rubrics, profiles, adapters,
+`0.2.0-beta.2`. The operational kernel, templates, rubrics, profiles, adapters,
 and translations MUST conform to it and MUST NOT silently redefine it.
 
 The canonical specification is initially maintained in English to support
@@ -36,8 +36,14 @@ with human oversight.
 
 Its vision is:
 
-> Enable an AI system to select and use the context, capabilities, and method
-> needed to solve a task at the quality justified by its purpose and risk.
+> Enable an AI system to discover and obtain the context required by a task,
+> form or select the justified capabilities and method, and guide the work to
+> the quality required by its purpose and risk.
+
+ShapingTheAxe does not impose one fixed workflow on every task. It diagnoses
+the available environment, identifies material uncertainty, and allows the
+working path to emerge from the task's purpose, evidence, authority, risk, and
+Definition of Done.
 
 ShapingTheAxe is not a giant prompt, a mandatory questionnaire, a tool catalog,
 or an autonomous replacement for human responsibility. It is a governed method
@@ -126,31 +132,54 @@ The system MAY adapt reversible, low-risk execution details inside the approved
 scope. It MUST escalate before materially changing intent, scope, architecture,
 cost, permissions, risk acceptance, or the Definition of Done.
 
-### 3.6 Contradictions remain visible
+### 3.6 Decision-local context sufficiency
+
+Context does not need to be complete for the entire project before useful work
+may begin.
+
+For each material decision, the system MUST determine whether the currently
+available context is sufficient to decide or act at the applicable risk level.
+It MUST obtain more context only when doing so can materially affect the next
+decision, its safety, its correctness, or its verification.
+
+Context may be:
+
+- **provided:** explicitly supplied by the user or governing contract;
+- **discoverable:** available in repositories, files, documentation, tools,
+  connected sources, runtime state, or prior project evidence;
+- **elicited:** obtainable only by asking an authorised human.
+
+The system MUST inspect relevant discoverable context before requesting
+elicited context.
+
+Context sufficiency MUST be reassessed when new evidence, deviations,
+contradictions, failures, or material decisions expose new uncertainty.
+
+### 3.7 Contradictions remain visible
 
 A material contradiction MUST be detected, recorded, and reported. It MUST NOT
 be silently averaged, merged, or resolved. The system MAY recommend a
 resolution when authority is clear, but it MUST retain the conflicting sources
 and the basis of the resolution.
 
-### 3.7 Completion requires convergence
+### 3.8 Completion requires convergence
 
 Work is complete only when user intent, the governing contract, and observable
 evidence converge. Stopping activity is not completion.
 
-### 3.8 Execution and evolution are separate
+### 3.9 Execution and evolution are separate
 
 Runtime execution MAY record observations and learning candidates. It MUST NOT
 modify the core, promote capabilities, or rewrite its own governing rules.
 Evolution occurs after closure through an explicit, versioned process.
 
-### 3.9 Minimum privilege
+### 3.10 Minimum privilege
 
 Every capability MUST operate with the minimum permissions and duration needed
 for its mission. Permissions MUST NOT propagate implicitly from an orchestrator
 to a delegated capability.
 
-### 3.10 Portability by separation
+### 3.11 Portability by separation
 
 Canonical behavior MUST be independent of provider and tool. Provider-specific
 behavior belongs in adapters and MUST remain conformant with the canonical
@@ -207,6 +236,12 @@ alter an active execution.
 The beta implements these planes through portable Markdown contracts and
 versioned records. It does not require a CLI, automatic agent orchestration,
 custom MCP servers, or automated learning.
+
+The beta MAY reason about, specify, and manually coordinate temporary
+capabilities or specialist-agent contracts. It does not claim automatic agent
+creation, autonomous multi-agent spawning, or executable orchestration unless
+the active provider and adapter explicitly supply and validate those
+capabilities.
 
 ## 5. Context, risk, and authority models
 
@@ -497,8 +532,26 @@ MUST be evaluated separately.
 
 ### 8.3 Synthesis
 
-When no suitable capability exists, the system MAY propose or create the
-minimum necessary skill, agent contract, MCP specification, or helper.
+When no suitable capability exists, the system MAY define or create the
+minimum necessary temporary skill, specialist-agent contract, checklist, MCP
+specification, or helper justified by the task.
+
+A synthesized capability MUST define proportionately:
+
+- purpose and material need;
+- bounded mission and scope;
+- minimum required context;
+- inputs and expected outputs;
+- permissions and prohibited actions;
+- success, stop, and escalation conditions;
+- required evidence;
+- intended lifetime: ephemeral, project, shared candidate, or another governed
+  lifecycle state.
+
+Capability formation MUST remain proportional. The system MUST NOT create a
+specialist, document, tool, process stage, or coordination layer merely because
+it is available or reusable.
+
 Executable implementation, network access, credentials, private data, writes,
 external services, or costs require the authority defined by Sections 5.6 and
 10.
