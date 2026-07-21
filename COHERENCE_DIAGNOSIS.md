@@ -4,7 +4,9 @@
 `context-init v0.2`  
 **Consolidation authority:** approved Brain Consolidation decisions  
 **Target:** ShapingTheAxe `0.2.0-beta.1`  
-**Status:** Consolidated diagnosis
+**Status:** Consolidated diagnosis — historical record, retained unchanged as
+the original consolidation rationale. See `CHANGELOG.md` for subsequent
+repository-level changes.
 
 ## 1. Executive finding
 

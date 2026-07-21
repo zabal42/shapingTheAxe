@@ -1,7 +1,9 @@
 # ShapingTheAxe Beta Implementation Plan
 
 **Target:** `0.2.0-beta.1`  
-**Status:** Authorized  
+**Status:** Authorized — historical construction record. Retained unchanged;
+not rewritten to describe later reorganizations. See `CHANGELOG.md` for
+subsequent repository-level changes.  
 **Authorization:** User confirmed the nine architecture decisions, required the
 design artifacts before framework modification, and authorized execution.  
 **Intervention mode:** `FULL_CYCLE` for documentary framework construction  
