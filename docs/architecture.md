@@ -49,6 +49,33 @@ Evaluates closed-run evidence, learning candidates, versions, regressions,
 retention, pruning, promotion proposals, and rollback. It cannot alter active
 runtime or the core.
 
+## Execution mechanism
+
+The four planes describe what the system owns, not how it runs. The **STA
+Execution Engine** is the future mechanism intended to perform the
+operational cycle, own orchestration (Brain Specification §7), and produce
+Runtime Plane state automatically. It is not a fifth plane.
+
+The current reference implementation performs this role manually: a capable
+AI environment follows the STA Kernel by hand. A CLI runner, automated agent
+orchestration, automated capability synthesis, and MCP coordination remain
+unapproved proposals in the Brain Specification.
+
+Two adapter concepts describe how providers and capabilities connect to
+ShapingTheAxe, kept separately scoped:
+
+- **STA Environment Adapters** — route a specific AI tool into the STA
+  Kernel (`adapters/` stubs today).
+- **STA Capability Adapters** — implement a canonical capability
+  specification for a provider (Brain Specification §8.2; not yet built).
+
+The boundary between the two remains open and is tracked, not resolved, by
+this terminology.
+
+> Terminology note: the Brain Specification remains the semantic authority.
+> Where this naming differs from its wording, the Brain Specification governs
+> until it is revised.
+
 ## Runtime flow
 
 ```text

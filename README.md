@@ -2,13 +2,17 @@
 
 > Shape the decision before committing the cut.
 
-ShapingTheAxe is a provider-independent framework for preparing, deciding,
-executing, verifying, and learning from AI-assisted work. It aims to maximize
-justified result quality while using the minimum total cost compatible with
-risk and the Definition of Done.
+ShapingTheAxe is a provider-independent, governed method for preparing,
+deciding, executing, verifying, and learning from AI-assisted work with human
+oversight. It aims to maximize justified result quality while using the
+minimum total cost compatible with risk and the Definition of Done.
 
-This is a manually executable beta, not a CLI, an agent platform, or a giant
-prompt.
+It is not a giant prompt, a mandatory questionnaire, a tool catalog, or an
+autonomous replacement for human responsibility.
+
+The current beta implements this method manually, through the STA Kernel,
+without a CLI or automated orchestration. See [Architecture](#architecture)
+for what is stable identity versus current implementation.
 
 ## Status
 
@@ -25,6 +29,44 @@ prompt.
 
 Foundation `v0.1` remains immutable and separately versioned. This beta is a
 new protocol line; it does not silently rewrite the predecessor.
+
+## Architecture
+
+ShapingTheAxe separates four conceptual planes and one execution mechanism.
+
+- **Brain Specification** — semantic authority. Defines vision, universal
+  laws, and governance. Stable regardless of implementation.
+- **STA Kernel** — the compact, portable operational form of the Brain
+  Specification.
+- **Runtime Plane** — the state of one task execution: classification, active
+  context, claims, decisions, gates, plan, evidence, and closure. Temporary or
+  project-scoped, not the core.
+- **Capability Plane** — canonical capability specifications, discovered on
+  demand under `DISCOVER → REUSE → COMPOSE → SYNTHESIZE`.
+- **Evolution Plane** — reviews closed-run evidence and proposes retention,
+  pruning, or promotion after closure. Cannot alter an active run.
+- **STA Execution Engine** — the future mechanism intended to perform the
+  operational cycle, own orchestration, and produce Runtime Plane state
+  automatically. It is not a fifth plane; it is how the four planes would be
+  executed by an automated system.
+
+The current reference implementation performs this role manually: a capable
+AI environment follows the STA Kernel by hand. Automated orchestration,
+executable skills, a CLI runner, and MCP coordination are governed future
+capabilities, not yet approved — see [Evolution path](#evolution-path).
+
+Two adapter concepts describe how providers and capabilities connect to
+ShapingTheAxe, kept separately scoped:
+
+- **STA Environment Adapters** — route a specific AI tool or CLI (Claude
+  Code, Codex, Copilot) into the STA Kernel. Implemented today as the stubs
+  in `adapters/`.
+- **STA Capability Adapters** — implement a canonical capability
+  specification for a specific provider or tool. Not yet built; defined
+  normatively in the Brain Specification.
+
+The boundary between the two is still open and tracked as a known
+terminological debt, not resolved by this naming pass.
 
 ## What changed from foundation `v0.1`
 
@@ -56,6 +98,9 @@ deep work or handoff, use the separate context brief, implementation plan, and
 completion report.
 
 ## Operating model
+
+The cycle below is what the current reference implementation performs by
+hand — the role a future STA Execution Engine is intended to automate.
 
 1. Classify task, authority, risk, and budget.
 2. Design inspection around decision-changing claims.
@@ -157,20 +202,44 @@ for comparisons with brainstorming and normal workflows.
 
 ## Current exclusions
 
-The beta deliberately excludes:
+These describe the beta's current reference implementation — which manually
+performs the role a future STA Execution Engine will automate — not a
+permanent limit on the architecture. See [Evolution path](#evolution-path).
 
-- CLI and executable state engine;
-- automatic agent orchestration;
+The beta deliberately excludes, per `SHAPING_THE_AXE_BRAIN_SPEC.md` §13.3:
+
+- a CLI;
+- automatic multi-agent orchestration;
 - custom MCP servers;
-- automated learning or core mutation;
-- large capability catalogs;
-- provider-specific packaged adapters;
-- translations not yet semantically reviewed;
-- universal-effectiveness claims;
-- generated book.
+- automated learning or core updates;
+- a large capability catalog;
+- production authority;
+- claims of universal effectiveness;
+- a generated book.
 
-Future ideas are labelled `PROPOSALS — NOT YET APPROVED` and are not beta
-requirements.
+`docs/architecture.md` records additional current non-goals at the
+architecture-documentation level (provider-specific packaged adapters,
+translated releases before synchronization review, automatic context graph,
+capability registry).
+
+## Evolution path
+
+The beta's current exclusions are a state of evidence, not a ceiling on what
+ShapingTheAxe can become. Proposals for building the STA Execution Engine are
+recorded, gated, and evaluated before approval:
+
+- a CLI runner for repeatable kernel activation;
+- automated multi-agent orchestration;
+- automated capability synthesis, including executable skills;
+- STA Capability Adapters for MCP coordination;
+- an automated learning pipeline.
+
+Each proposal defines its problem, benefit, cost, risk, core impact, and
+validating experiment before implementation — see
+`PROPOSALS — NOT YET APPROVED` in
+[`SHAPING_THE_AXE_BRAIN_SPEC.md`](SHAPING_THE_AXE_BRAIN_SPEC.md) and the
+deferred-proposals list in [`docs/roadmap.md`](docs/roadmap.md). None of them
+is a beta requirement, and none is implemented today.
 
 ## Translation policy
 

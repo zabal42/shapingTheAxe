@@ -25,6 +25,11 @@ EVIDENCE + COMPLETION
 EVALUATION + LEARNING CANDIDATES
 ```
 
+This whole diagram is performed today by a human operator and a capable AI
+environment manually taking on the role that a future **STA Execution
+Engine** is intended to automate. See `docs/architecture.md` for the
+mechanism/plane distinction.
+
 ## 2. Architecture principles
 
 1. One semantic authority: `SHAPING_THE_AXE_BRAIN_SPEC.md`.
