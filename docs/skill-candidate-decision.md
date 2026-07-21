@@ -3,7 +3,7 @@
 **Decision ID:** `STA-DEC-SKILLS-001`
 **Status:** `APPROVED — CLASSIFICATION ONLY`
 **Date:** 2026-07-14
-**Applies to:** ShapingTheAxe `0.2.0-beta.1`
+**Applies to:** ShapingTheAxe `0.2.0-beta.2`
 **Proposed repository location:** `docs/skill-candidate-decision.md`
 **Semantic authority:** `SHAPING_THE_AXE_BRAIN_SPEC.md`
 

@@ -2,7 +2,7 @@
 
 **Easy Start version:** `0.1-beta`
 
-**Framework target:** ShapingTheAxe `0.2.0-beta.1`
+**Framework target:** ShapingTheAxe `0.2.0-beta.2`
 
 **Role:** Non-normative onboarding. If anything here conflicts with
 `SHAPING_THE_AXE_BRAIN_SPEC.md`, the Brain Specification prevails.

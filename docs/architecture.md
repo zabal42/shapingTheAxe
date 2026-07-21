@@ -103,9 +103,10 @@ the English source governs disagreement.
 ## Version boundary
 
 Foundation `v0.1` with `context-init v0.2` is immutable historical evidence.
-Beta `0.2.0-beta.1` is a new line with a different semantic authority and
-adaptive behavior. Rollback restores complete versions; it does not splice
-rules across lines.
+Beta `0.2.0-beta.1` opened a new line with a different semantic authority and
+adaptive behavior. `0.2.0-beta.2` is a later revision of that same line, not a
+new line. Rollback restores complete versions; it does not splice rules
+across lines.
 
 ## Current non-goals
 

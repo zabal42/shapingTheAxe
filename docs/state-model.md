@@ -1,6 +1,6 @@
 # State Model
 
-**Applies to:** ShapingTheAxe `0.2.0-beta.1`  
+**Applies to:** ShapingTheAxe `0.2.0-beta.2`  
 **Authority:** Derived from `SHAPING_THE_AXE_BRAIN_SPEC.md`  
 **Purpose:** Define unambiguous states, guards, and transitions without
 requiring an executable state engine.

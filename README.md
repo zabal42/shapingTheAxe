@@ -12,15 +12,16 @@ prompt.
 
 ## Status
 
-- **Framework:** `0.2.0-beta.1`
-- **Brain Specification:** `0.2.0-beta.1`
-- **Portable kernel:** `0.2.0-beta.1`
+- **Framework:** `0.2.0-beta.2`
+- **Brain Specification:** `0.2.0-beta.2`
+- **Portable kernel:** `0.2.0-beta.2`
 - **Status:** Beta under comparative validation
 - **Normative language:** English
 - **Normative semantic source:**
   [`SHAPING_THE_AXE_BRAIN_SPEC.md`](SHAPING_THE_AXE_BRAIN_SPEC.md)
 - **Historical predecessor:** foundation `v0.1`, containing
   `context-init v0.2`
+- **Version history:** [`CHANGELOG.md`](CHANGELOG.md)
 
 Foundation `v0.1` remains immutable and separately versioned. This beta is a
 new protocol line; it does not silently rewrite the predecessor.
@@ -70,16 +71,22 @@ completion report.
 ```text
 .
 ├── README.md
-├── framework.yaml
-├── SHAPING_THE_AXE_BRAIN_SPEC.md
-├── ShapingTheAxe.md
-├── COHERENCE_DIAGNOSIS.md
-├── IMPLEMENTATION_PLAN.md
+├── CHANGELOG.md
+├── CLAUDE.md                      # self-activation for Claude Code
+├── AGENTS.md                      # self-activation for Codex and compatible tools
+├── framework.yaml                 # exact version manifest
+├── SHAPING_THE_AXE_BRAIN_SPEC.md  # semantic authority
+├── ShapingTheAxe.md                # portable operational kernel
+├── COHERENCE_DIAGNOSIS.md          # historical: v0.1 -> beta migration rationale
+├── IMPLEMENTATION_PLAN.md          # historical: beta.1 construction record
+├── START_HERE.md                   # 30-second onboarding
 ├── docs/
 │   ├── architecture.md
 │   ├── beta-architecture.md
 │   ├── roadmap.md
-│   └── state-model.md
+│   ├── state-model.md
+│   ├── validation-history.md
+│   └── skill-candidate-decision.md
 ├── templates/
 │   ├── run-record.md
 │   ├── context-brief.md
@@ -87,14 +94,37 @@ completion report.
 │   └── completion-report.md
 ├── evaluation/
 │   ├── rubric.md
-│   └── beta-validation-protocol.md
-└── examples/
-    └── ft_irc/
-        └── README.md
+│   ├── beta-validation-protocol.md
+│   └── testing-strategy-incubation-protocol.md
+├── prompts/
+│   └── activate.md                 # copy-paste universal activation prompt
+├── adapters/                       # routing stubs for CLAUDE.md/AGENTS.md/Copilot
+│   ├── CLAUDE.stub.md
+│   ├── AGENTS.stub.md
+│   └── copilot-instructions.stub.md
+├── translations/
+│   └── es/START_HERE.md            # synchronized Spanish onboarding
+├── incubator/
+│   └── testing-strategy/           # SKILL.md under controlled incubation only
+├── examples/
+│   └── ft_irc/
+│       └── README.md               # frozen historical reference case
+├── business/                       # product exploration — non-normative
+│   ├── VISION.md
+│   ├── ELDORADO_HYPOTHESIS.md
+│   ├── STA_ASSISTANTS_FOUNDATION.md
+│   ├── PRODUCT_HYPOTHESES.md
+│   ├── BUSINESS_MODELS.md
+│   ├── MVP_VALIDATION.md
+│   └── DECISIONS.md
+└── validation/
+    └── case-studies/
+        └── crossfit-business-copilot/  # frozen blind-evaluation lab evidence
 ```
 
-No empty CLI, adapter, agent, MCP, capability, translation, or learning
-directories are included.
+`business/` holds product exploration, not framework behavior — see
+[`business/README.md`](business/README.md). `validation/` holds frozen
+comparative evidence — nothing there is re-run or reconstructed.
 
 ## Reference evidence
 
@@ -102,6 +132,12 @@ The historical `ft_irc` case is closed with `91.3/100`, verdict `PASS`, no hard
 failure, and a successful independent handoff. It is not Reference-grade. The
 audit is frozen and must not be repeated or reconstructed from this package.
 See [`examples/ft_irc/README.md`](examples/ft_irc/README.md).
+
+The `crossfit-business-copilot` case is a closed comparative laboratory: two
+independent implementations built from the same frozen input, evaluated blind
+by three independent evaluators who converged on the same ranking. It is
+positive multidomain beta evidence, not proof of universal effectiveness. See
+[`validation/case-studies/crossfit-business-copilot/README.md`](validation/case-studies/crossfit-business-copilot/README.md).
 
 ## Validation
 

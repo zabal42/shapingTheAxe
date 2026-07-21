@@ -2,7 +2,7 @@
 
 **Launcher version:** `0.1-beta`
 
-**Framework target:** ShapingTheAxe `0.2.0-beta.1`
+**Framework target:** ShapingTheAxe `0.2.0-beta.2`
 
 This is a routing prompt, not a semantic authority. The Brain Specification and
 portable kernel prevail if a conflict appears.

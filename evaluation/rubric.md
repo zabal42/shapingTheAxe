@@ -1,7 +1,7 @@
 # ShapingTheAxe Conformance and Quality Rubric
 
-**Framework:** `0.2.0-beta.1`  
-**Kernel:** `0.2.0-beta.1`  
+**Framework:** `0.2.0-beta.2`  
+**Kernel:** `0.2.0-beta.2`  
 **Rubric version:** `0.2-beta`  
 **Status:** Canonical beta evaluation contract
 

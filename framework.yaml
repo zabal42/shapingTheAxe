@@ -1,15 +1,15 @@
 framework:
   name: ShapingTheAxe
-  version: 0.2.0-beta.1
+  version: 0.2.0-beta.2
   status: beta
-  released: 2026-07-14
+  released: 2026-07-19
 
 normative:
   language: English
   semantic_source: SHAPING_THE_AXE_BRAIN_SPEC.md
-  specification_version: 0.2.0-beta.1
+  specification_version: 0.2.0-beta.2
   operational_kernel: ShapingTheAxe.md
-  kernel_version: 0.2.0-beta.1
+  kernel_version: 0.2.0-beta.2
 
 predecessor:
   framework_version: v0.1
@@ -26,6 +26,12 @@ contracts:
   completion_report: templates/completion-report.md
   evaluation_rubric: evaluation/rubric.md
   beta_validation: evaluation/beta-validation-protocol.md
+  testing_strategy_incubation: evaluation/testing-strategy-incubation-protocol.md
+  activation_prompt: prompts/activate.md
+  onboarding: START_HERE.md
+  adapters_dir: adapters/
+  incubator_dir: incubator/
+  skill_candidate_decisions: docs/skill-candidate-decision.md
 
 reference_cases:
   ft_irc:
@@ -34,11 +40,21 @@ reference_cases:
     verdict: PASS
     reference_grade: false
     rerun_allowed: false
+  crossfit_business_copilot:
+    status: CLOSED
+    verdict: PASS
+    evidence: validation/case-studies/crossfit-business-copilot/
+    reference_grade: false
+    rerun_allowed: false
 
 translations:
   canonical_language: English
   policy: synchronized-versioned
-  current_translations: []
+  current_translations:
+    - language: Spanish
+      file: translations/es/START_HERE.md
+      translation_of: START_HERE.md
+      synchronization_state: CURRENT
 
 excluded_from_beta:
   - cli

@@ -1,6 +1,6 @@
 # Beta Architecture
 
-**Target:** ShapingTheAxe `0.2.0-beta.1`  
+**Target:** ShapingTheAxe `0.2.0-beta.2`  
 **Architecture style:** Markdown-first, provider-independent, manually
 executable, versioned, and reversible
 
@@ -164,7 +164,7 @@ translation header contains:
 
 ```yaml
 translation_of: SHAPING_THE_AXE_BRAIN_SPEC.md
-source_version: 0.2.0-beta.1
+source_version: 0.2.0-beta.2
 normative_language: English
 translation_language: <language>
 synchronization_state: CURRENT | STALE | DRAFT

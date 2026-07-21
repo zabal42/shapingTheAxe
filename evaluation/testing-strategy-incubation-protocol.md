@@ -4,7 +4,7 @@
 
 **Candidate:** `testing-strategy 0.1.0-candidate.1`
 
-**Framework target:** ShapingTheAxe `0.2.0-beta.1`
+**Framework target:** ShapingTheAxe `0.2.0-beta.2`
 
 **Decision source:** `STA-DEC-SKILLS-001`
 

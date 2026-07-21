@@ -13,7 +13,7 @@ last_reviewed_source_version: 0.1-beta
 
 **Versión de esta traducción:** `0.1-beta-es.1`
 
-**Framework de referencia:** ShapingTheAxe `0.2.0-beta.1`
+**Framework de referencia:** ShapingTheAxe `0.2.0-beta.2`
 
 **Función:** guía de inicio no normativa. Esta es una traducción sincronizada
 de [`START_HERE.md`](../../START_HERE.md). Si existe cualquier conflicto,
