@@ -1,0 +1,96 @@
+########## ¿Cuál fue la ocupación media de este mes?
+Resultado
+63,33% de ocupación media.
+
+Métrica: Ocupación media por sesión
+Periodo: 2026-06-01 a 2026-06-30, ambos inclusive
+Datos utilizados: sesiones analizadas=6, reservas elegibles=17, capacidad total=26
+Exclusiones:
+- 1 sesión cancelada por el box.
+- 1 sesión sin capacidad positiva.
+- Reservas canceladas, en lista de espera o fuera del periodo.
+Supuestos:
+- Ocupación = reservas confirmadas y no canceladas / capacidad de la sesión.
+- La media del periodo otorga el mismo peso a cada sesión válida.
+Limitaciones:
+- La ocupación mide reservas, no asistencia efectiva.
+- No se detectaron sesiones por encima de su capacidad registrada.
+
+########## ¿Qué tres clases tuvieron menos ocupación este mes?
+Resultado
+1. Halterofilia a las 19:00: 37,5% (2 sesiones).
+2. WOD a las 18:00: 62,5% (2 sesiones).
+3. WOD a las 07:00: 90% (2 sesiones).
+
+Métrica: Ocupación media por clase y horario, orden ascendente
+Periodo: 2026-06-01 a 2026-06-30, ambos inclusive
+Datos utilizados: sesiones analizadas=6, grupos analizados=3
+Exclusiones:
+- 1 sesión cancelada por el box.
+- 1 sesión sin capacidad positiva.
+- Reservas canceladas, en lista de espera o fuera del periodo.
+Supuestos:
+- Ocupación = reservas confirmadas y no canceladas / capacidad de la sesión.
+- La media del periodo otorga el mismo peso a cada sesión válida.
+Limitaciones:
+- La ocupación mide reservas, no asistencia efectiva.
+- No se detectaron sesiones por encima de su capacidad registrada.
+- La clasificación agrupa por tipo de clase y hora, no por entrenador ni sala.
+
+########## ¿Qué horario tuvo más cancelaciones este mes?
+Resultado
+1. 19:00: 57,14% (4/7 reservas).
+2. 18:00: 28,57% (2/7 reservas).
+3. 07:00: 10% (1/10 reservas).
+
+Métrica: Tasa de cancelación por hora de inicio
+Periodo: 2026-06-01 a 2026-06-30, ambos inclusive
+Datos utilizados: sesiones consideradas=7, reservas analizadas=24
+Exclusiones:
+- 1 sesión cancelada por el box.
+- Reservas fuera del periodo.
+Supuestos:
+- Tasa de cancelación = reservas con fecha de cancelación / todos los registros de reserva del horario.
+- El horario corresponde a la hora de inicio de la sesión.
+Limitaciones:
+- La tasa no distingue quién canceló ni el motivo de cancelación.
+- Los horarios con cero reservas no aparecen porque no tienen denominador.
+
+########## ¿Qué usuarios llevan más de 21 días sin asistir?
+Resultado
+- Socio 005: 60 días (sin asistencias; fecha de alta usada como proxy; estado activo).
+- Socio 002: 30 días (última asistencia 2026-05-31; estado activo).
+- Socio 003: 28 días (última asistencia 2026-06-02; estado activo).
+
+Métrica: Usuarios activos sin asistencia durante más de 21 días
+Periodo: a fecha 2026-06-30; umbral > 21 días
+Datos utilizados: usuarios activos analizados=7, asistencias analizadas=32
+Exclusiones:
+- 1 usuario inactivo o todavía no dado de alta en la fecha de análisis.
+- Reservas canceladas, listas de espera y reservas sin asistencia.
+Supuestos:
+- “Activo” corresponde al indicador normalizado active=true.
+- Para un usuario sin asistencias, la fecha de alta actúa como referencia mínima explícita.
+Limitaciones:
+- La fecha de alta no demuestra una asistencia; los casos proxy se identifican en el resultado.
+- El cálculo usa días naturales y la fecha fija del dataset, no la hora actual del sistema.
+
+########## Compara la ocupación de este mes con el mes anterior.
+Resultado
+Primer periodo: 65%.
+Segundo periodo: 63,33%.
+Diferencia: -1,67 puntos porcentuales; -2,56% relativo.
+Comparabilidad estructural: Sí.
+
+Métrica: Comparación de ocupación media por sesión
+Periodo: 2026-05-01 a 2026-05-31 frente a 2026-06-01 a 2026-06-30
+Datos utilizados: sesiones analizadas en el primer periodo=6, sesiones analizadas en el segundo periodo=6
+Exclusiones:
+- Primer periodo: 0 sesiones canceladas por el box. 0 sesiones sin capacidad positiva. Reservas canceladas, en lista de espera o fuera del periodo.
+- Segundo periodo: 1 sesión cancelada por el box. 1 sesión sin capacidad positiva. Reservas canceladas, en lista de espera o fuera del periodo.
+Supuestos:
+- Ocupación = reservas confirmadas y no canceladas / capacidad de la sesión.
+- La media del periodo otorga el mismo peso a cada sesión válida.
+Limitaciones:
+- Una comparación comparable en estructura no controla festivos, cambios de entrenador u otros factores externos.
+

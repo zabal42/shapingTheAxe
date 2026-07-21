@@ -1,0 +1,629 @@
+{
+  "metadata": {
+    "schemaVersion": 1,
+    "boxId": "box-demo-001",
+    "boxName": "CrossFit Demo Box",
+    "timezone": "Europe/Madrid",
+    "asOf": "2026-06-30",
+    "generatedBy": "scripts/generate-dataset.js",
+    "source": "simulated"
+  },
+  "users": [
+    {
+      "id": "u001",
+      "displayName": "Socio 001",
+      "active": true,
+      "createdOn": "2025-01-10"
+    },
+    {
+      "id": "u002",
+      "displayName": "Socio 002",
+      "active": true,
+      "createdOn": "2025-02-01"
+    },
+    {
+      "id": "u003",
+      "displayName": "Socio 003",
+      "active": true,
+      "createdOn": "2025-02-15"
+    },
+    {
+      "id": "u004",
+      "displayName": "Socio 004",
+      "active": false,
+      "createdOn": "2025-01-20",
+      "deactivatedOn": "2026-06-01"
+    },
+    {
+      "id": "u005",
+      "displayName": "Socio 005",
+      "active": true,
+      "createdOn": "2026-05-01"
+    },
+    {
+      "id": "u006",
+      "displayName": "Socio 006",
+      "active": true,
+      "createdOn": "2025-03-01"
+    },
+    {
+      "id": "u007",
+      "displayName": "Socio 007",
+      "active": true,
+      "createdOn": "2025-03-10"
+    },
+    {
+      "id": "u008",
+      "displayName": "Socio 008",
+      "active": true,
+      "createdOn": "2025-04-01"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "s001",
+      "classId": "wod",
+      "className": "WOD",
+      "date": "2026-05-05",
+      "startTime": "07:00",
+      "durationMinutes": 60,
+      "capacity": 5,
+      "cancelled": false
+    },
+    {
+      "id": "s002",
+      "classId": "wod",
+      "className": "WOD",
+      "date": "2026-05-12",
+      "startTime": "07:00",
+      "durationMinutes": 60,
+      "capacity": 5,
+      "cancelled": false
+    },
+    {
+      "id": "s003",
+      "classId": "wod",
+      "className": "WOD",
+      "date": "2026-05-18",
+      "startTime": "18:00",
+      "durationMinutes": 60,
+      "capacity": 4,
+      "cancelled": false
+    },
+    {
+      "id": "s004",
+      "classId": "wod",
+      "className": "WOD",
+      "date": "2026-05-24",
+      "startTime": "18:00",
+      "durationMinutes": 60,
+      "capacity": 4,
+      "cancelled": false
+    },
+    {
+      "id": "s005",
+      "classId": "weightlifting",
+      "className": "Halterofilia",
+      "date": "2026-05-28",
+      "startTime": "19:00",
+      "durationMinutes": 60,
+      "capacity": 4,
+      "cancelled": false
+    },
+    {
+      "id": "s006",
+      "classId": "weightlifting",
+      "className": "Halterofilia",
+      "date": "2026-05-31",
+      "startTime": "19:00",
+      "durationMinutes": 60,
+      "capacity": 4,
+      "cancelled": false
+    },
+    {
+      "id": "s007",
+      "classId": "wod",
+      "className": "WOD",
+      "date": "2026-06-02",
+      "startTime": "07:00",
+      "durationMinutes": 60,
+      "capacity": 5,
+      "cancelled": false
+    },
+    {
+      "id": "s008",
+      "classId": "wod",
+      "className": "WOD",
+      "date": "2026-06-09",
+      "startTime": "07:00",
+      "durationMinutes": 60,
+      "capacity": 5,
+      "cancelled": false
+    },
+    {
+      "id": "s009",
+      "classId": "wod",
+      "className": "WOD",
+      "date": "2026-06-15",
+      "startTime": "18:00",
+      "durationMinutes": 60,
+      "capacity": 4,
+      "cancelled": false
+    },
+    {
+      "id": "s010",
+      "classId": "wod",
+      "className": "WOD",
+      "date": "2026-06-20",
+      "startTime": "18:00",
+      "durationMinutes": 60,
+      "capacity": 4,
+      "cancelled": false
+    },
+    {
+      "id": "s011",
+      "classId": "weightlifting",
+      "className": "Halterofilia",
+      "date": "2026-06-25",
+      "startTime": "19:00",
+      "durationMinutes": 60,
+      "capacity": 4,
+      "cancelled": false
+    },
+    {
+      "id": "s012",
+      "classId": "weightlifting",
+      "className": "Halterofilia",
+      "date": "2026-06-28",
+      "startTime": "19:00",
+      "durationMinutes": 60,
+      "capacity": 4,
+      "cancelled": false
+    },
+    {
+      "id": "s013",
+      "classId": "mobility",
+      "className": "Movilidad",
+      "date": "2026-06-29",
+      "startTime": "20:00",
+      "durationMinutes": 60,
+      "capacity": 10,
+      "cancelled": true
+    },
+    {
+      "id": "s014",
+      "classId": "mobility",
+      "className": "Movilidad",
+      "date": "2026-06-30",
+      "startTime": "20:00",
+      "durationMinutes": 60,
+      "capacity": 0,
+      "cancelled": false
+    }
+  ],
+  "bookings": [
+    {
+      "id": "b001",
+      "userId": "u001",
+      "sessionId": "s001",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b002",
+      "userId": "u002",
+      "sessionId": "s001",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b003",
+      "userId": "u003",
+      "sessionId": "s001",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b004",
+      "userId": "u006",
+      "sessionId": "s001",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b005",
+      "userId": "u007",
+      "sessionId": "s001",
+      "state": "confirmed",
+      "attended": false,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": "2026-05-05T05:30:00"
+    },
+    {
+      "id": "b006",
+      "userId": "u001",
+      "sessionId": "s002",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b007",
+      "userId": "u002",
+      "sessionId": "s002",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b008",
+      "userId": "u003",
+      "sessionId": "s002",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b009",
+      "userId": "u006",
+      "sessionId": "s002",
+      "state": "confirmed",
+      "attended": false,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": "2026-05-12T05:30:00"
+    },
+    {
+      "id": "b010",
+      "userId": "u007",
+      "sessionId": "s002",
+      "state": "confirmed",
+      "attended": false,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": "2026-05-12T05:30:00"
+    },
+    {
+      "id": "b011",
+      "userId": "u001",
+      "sessionId": "s003",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b012",
+      "userId": "u002",
+      "sessionId": "s003",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b013",
+      "userId": "u006",
+      "sessionId": "s003",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b014",
+      "userId": "u007",
+      "sessionId": "s003",
+      "state": "confirmed",
+      "attended": false,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": "2026-05-18T05:30:00"
+    },
+    {
+      "id": "b015",
+      "userId": "u001",
+      "sessionId": "s004",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b016",
+      "userId": "u002",
+      "sessionId": "s004",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b017",
+      "userId": "u006",
+      "sessionId": "s004",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b018",
+      "userId": "u007",
+      "sessionId": "s004",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b019",
+      "userId": "u001",
+      "sessionId": "s005",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b020",
+      "userId": "u006",
+      "sessionId": "s005",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b021",
+      "userId": "u008",
+      "sessionId": "s005",
+      "state": "confirmed",
+      "attended": false,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": "2026-05-28T05:30:00"
+    },
+    {
+      "id": "b022",
+      "userId": "u002",
+      "sessionId": "s006",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b023",
+      "userId": "u007",
+      "sessionId": "s006",
+      "state": "confirmed",
+      "attended": false,
+      "bookedAt": "2026-04-20T12:00:00",
+      "cancelledAt": "2026-05-31T05:30:00"
+    },
+    {
+      "id": "b024",
+      "userId": "u001",
+      "sessionId": "s007",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b025",
+      "userId": "u003",
+      "sessionId": "s007",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b026",
+      "userId": "u006",
+      "sessionId": "s007",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b027",
+      "userId": "u007",
+      "sessionId": "s007",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b028",
+      "userId": "u008",
+      "sessionId": "s007",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b029",
+      "userId": "u001",
+      "sessionId": "s008",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b030",
+      "userId": "u006",
+      "sessionId": "s008",
+      "state": "confirmed",
+      "attended": false,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b031",
+      "userId": "u007",
+      "sessionId": "s008",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b032",
+      "userId": "u008",
+      "sessionId": "s008",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b033",
+      "userId": "u002",
+      "sessionId": "s008",
+      "state": "confirmed",
+      "attended": false,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": "2026-06-09T05:30:00"
+    },
+    {
+      "id": "b034",
+      "userId": "u001",
+      "sessionId": "s009",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b035",
+      "userId": "u006",
+      "sessionId": "s009",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b036",
+      "userId": "u007",
+      "sessionId": "s009",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b037",
+      "userId": "u002",
+      "sessionId": "s009",
+      "state": "confirmed",
+      "attended": false,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": "2026-06-15T05:30:00"
+    },
+    {
+      "id": "b038",
+      "userId": "u001",
+      "sessionId": "s010",
+      "state": "confirmed",
+      "attended": false,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b039",
+      "userId": "u007",
+      "sessionId": "s010",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b040",
+      "userId": "u003",
+      "sessionId": "s010",
+      "state": "confirmed",
+      "attended": false,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": "2026-06-20T05:30:00"
+    },
+    {
+      "id": "b041",
+      "userId": "u001",
+      "sessionId": "s011",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b042",
+      "userId": "u008",
+      "sessionId": "s011",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b043",
+      "userId": "u002",
+      "sessionId": "s011",
+      "state": "confirmed",
+      "attended": false,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": "2026-06-25T05:30:00"
+    },
+    {
+      "id": "b044",
+      "userId": "u006",
+      "sessionId": "s011",
+      "state": "confirmed",
+      "attended": false,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": "2026-06-25T05:30:00"
+    },
+    {
+      "id": "b045",
+      "userId": "u001",
+      "sessionId": "s012",
+      "state": "confirmed",
+      "attended": true,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": null
+    },
+    {
+      "id": "b046",
+      "userId": "u003",
+      "sessionId": "s012",
+      "state": "confirmed",
+      "attended": false,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": "2026-06-28T05:30:00"
+    },
+    {
+      "id": "b047",
+      "userId": "u007",
+      "sessionId": "s012",
+      "state": "confirmed",
+      "attended": false,
+      "bookedAt": "2026-05-20T12:00:00",
+      "cancelledAt": "2026-06-28T05:30:00"
+    }
+  ]
+}

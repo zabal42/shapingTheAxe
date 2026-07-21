@@ -1,0 +1,282 @@
+[
+  {
+    "id": 1,
+    "first_name": "Laura",
+    "last_name": "Garcia",
+    "joined_on": "2024-04-09",
+    "deactivated_on": null
+  },
+  {
+    "id": 2,
+    "first_name": "Carlos",
+    "last_name": "Martinez",
+    "joined_on": "2024-07-04",
+    "deactivated_on": null
+  },
+  {
+    "id": 3,
+    "first_name": "Marta",
+    "last_name": "Lopez",
+    "joined_on": "2024-12-23",
+    "deactivated_on": null
+  },
+  {
+    "id": 4,
+    "first_name": "Javier",
+    "last_name": "Sanchez",
+    "joined_on": "2024-05-27",
+    "deactivated_on": null
+  },
+  {
+    "id": 5,
+    "first_name": "Lucia",
+    "last_name": "Perez",
+    "joined_on": "2024-05-12",
+    "deactivated_on": "2026-03-29"
+  },
+  {
+    "id": 6,
+    "first_name": "Diego",
+    "last_name": "Gomez",
+    "joined_on": "2025-07-16",
+    "deactivated_on": null
+  },
+  {
+    "id": 7,
+    "first_name": "Sara",
+    "last_name": "Fernandez",
+    "joined_on": "2025-01-26",
+    "deactivated_on": null
+  },
+  {
+    "id": 8,
+    "first_name": "Pablo",
+    "last_name": "Ruiz",
+    "joined_on": "2024-12-05",
+    "deactivated_on": null
+  },
+  {
+    "id": 9,
+    "first_name": "Elena",
+    "last_name": "Diaz",
+    "joined_on": "2024-03-22",
+    "deactivated_on": null
+  },
+  {
+    "id": 10,
+    "first_name": "Alvaro",
+    "last_name": "Moreno",
+    "joined_on": "2024-12-29",
+    "deactivated_on": null
+  },
+  {
+    "id": 11,
+    "first_name": "Nuria",
+    "last_name": "Alvarez",
+    "joined_on": "2024-11-27",
+    "deactivated_on": null
+  },
+  {
+    "id": 12,
+    "first_name": "Sergio",
+    "last_name": "Romero",
+    "joined_on": "2024-02-29",
+    "deactivated_on": null
+  },
+  {
+    "id": 13,
+    "first_name": "Cristina",
+    "last_name": "Navarro",
+    "joined_on": "2024-12-24",
+    "deactivated_on": null
+  },
+  {
+    "id": 14,
+    "first_name": "Ruben",
+    "last_name": "Torres",
+    "joined_on": "2025-09-12",
+    "deactivated_on": "2026-05-07"
+  },
+  {
+    "id": 15,
+    "first_name": "Paula",
+    "last_name": "Dominguez",
+    "joined_on": "2024-03-22",
+    "deactivated_on": null
+  },
+  {
+    "id": 16,
+    "first_name": "Adrian",
+    "last_name": "Vazquez",
+    "joined_on": "2025-10-27",
+    "deactivated_on": null
+  },
+  {
+    "id": 17,
+    "first_name": "Irene",
+    "last_name": "Ramos",
+    "joined_on": "2024-08-02",
+    "deactivated_on": null
+  },
+  {
+    "id": 18,
+    "first_name": "Hugo",
+    "last_name": "Gil",
+    "joined_on": "2024-02-17",
+    "deactivated_on": null
+  },
+  {
+    "id": 19,
+    "first_name": "Marina",
+    "last_name": "Serrano",
+    "joined_on": "2025-01-10",
+    "deactivated_on": null
+  },
+  {
+    "id": 20,
+    "first_name": "Daniel",
+    "last_name": "Blanco",
+    "joined_on": "2024-11-14",
+    "deactivated_on": null
+  },
+  {
+    "id": 21,
+    "first_name": "Andrea",
+    "last_name": "Garcia",
+    "joined_on": "2025-02-17",
+    "deactivated_on": null
+  },
+  {
+    "id": 22,
+    "first_name": "Victor",
+    "last_name": "Martinez",
+    "joined_on": "2024-02-22",
+    "deactivated_on": null
+  },
+  {
+    "id": 23,
+    "first_name": "Beatriz",
+    "last_name": "Lopez",
+    "joined_on": "2025-01-05",
+    "deactivated_on": "2026-04-15"
+  },
+  {
+    "id": 24,
+    "first_name": "Raul",
+    "last_name": "Sanchez",
+    "joined_on": "2025-09-02",
+    "deactivated_on": null
+  },
+  {
+    "id": 25,
+    "first_name": "Silvia",
+    "last_name": "Perez",
+    "joined_on": "2024-09-17",
+    "deactivated_on": null
+  },
+  {
+    "id": 26,
+    "first_name": "Mario",
+    "last_name": "Gomez",
+    "joined_on": "2025-07-10",
+    "deactivated_on": null
+  },
+  {
+    "id": 27,
+    "first_name": "Carmen",
+    "last_name": "Fernandez",
+    "joined_on": "2025-02-14",
+    "deactivated_on": null
+  },
+  {
+    "id": 28,
+    "first_name": "Ivan",
+    "last_name": "Ruiz",
+    "joined_on": "2024-02-06",
+    "deactivated_on": null
+  },
+  {
+    "id": 29,
+    "first_name": "Alba",
+    "last_name": "Diaz",
+    "joined_on": "2024-04-22",
+    "deactivated_on": null
+  },
+  {
+    "id": 30,
+    "first_name": "Jorge",
+    "last_name": "Moreno",
+    "joined_on": "2024-09-20",
+    "deactivated_on": null
+  },
+  {
+    "id": 31,
+    "first_name": "Rocio",
+    "last_name": "Alvarez",
+    "joined_on": "2025-06-10",
+    "deactivated_on": "2026-04-21"
+  },
+  {
+    "id": 32,
+    "first_name": "Fernando",
+    "last_name": "Romero",
+    "joined_on": "2025-10-25",
+    "deactivated_on": null
+  },
+  {
+    "id": 33,
+    "first_name": "Noelia",
+    "last_name": "Navarro",
+    "joined_on": "2024-03-19",
+    "deactivated_on": null
+  },
+  {
+    "id": 34,
+    "first_name": "Oscar",
+    "last_name": "Torres",
+    "joined_on": "2024-04-08",
+    "deactivated_on": null
+  },
+  {
+    "id": 35,
+    "first_name": "Patricia",
+    "last_name": "Dominguez",
+    "joined_on": "2024-05-20",
+    "deactivated_on": null
+  },
+  {
+    "id": 36,
+    "first_name": "Guillermo",
+    "last_name": "Vazquez",
+    "joined_on": "2025-10-20",
+    "deactivated_on": null
+  },
+  {
+    "id": 37,
+    "first_name": "Monica",
+    "last_name": "Ramos",
+    "joined_on": "2024-11-10",
+    "deactivated_on": null
+  },
+  {
+    "id": 38,
+    "first_name": "Alberto",
+    "last_name": "Gil",
+    "joined_on": "2024-03-04",
+    "deactivated_on": null
+  },
+  {
+    "id": 39,
+    "first_name": "Eva",
+    "last_name": "Serrano",
+    "joined_on": "2024-04-07",
+    "deactivated_on": null
+  },
+  {
+    "id": 40,
+    "first_name": "Manuel",
+    "last_name": "Blanco",
+    "joined_on": "2025-11-07",
+    "deactivated_on": null
+  }
+]

@@ -1,0 +1,8 @@
+Collected test files: ['test_selfcheck.py']
+
+PASSED: 2
+FAILED: 2
+
+--- FAILURES ---
+  test_selfcheck.py::test_fail  ->  AssertionError: intentional failure
+  test_selfcheck.py::test_raises_missing  ->  AssertionError: DID NOT RAISE <class 'ValueError'>

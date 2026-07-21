@@ -1,0 +1,12 @@
+  ✔ accepts the documented English inactivity equivalent (0.09825ms)
+  ✔ rejects malformed comparison periods safely (0.063625ms)
+  ✔ refuses unsupported coach-retention analysis with missing evidence (0.127458ms)
+✔ deterministic natural-language parser (4.419709ms)
+ℹ tests 28
+ℹ suites 4
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 124.768834

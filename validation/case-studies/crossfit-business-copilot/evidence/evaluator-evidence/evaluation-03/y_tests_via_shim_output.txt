@@ -1,0 +1,4 @@
+Collected test files: ['test_cli.py', 'test_dataset_integration.py', 'test_domain.py', 'test_formatter.py', 'test_metrics.py', 'test_nlp.py', 'test_periods.py']
+
+PASSED: 57
+FAILED: 0

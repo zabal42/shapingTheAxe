@@ -1,0 +1,85 @@
+
+=== A1: Empty dataset -> average occupancy ===
+{
+  "status": "insufficient_data",
+  "occupancyPct": null,
+  "sessionsAnalyzed": 0
+}
+
+=== A2: Zero-capacity session excluded? (cap0 + cap10 with 5 confirmed) ===
+{
+  "status": "ok",
+  "occupancyPct": 50,
+  "sessionsAnalyzed": 1,
+  "exclusions": [
+    "0 sesiones canceladas por el box.",
+    "1 sesión sin capacidad positiva.",
+    "Reservas canceladas, en lista de espera o fuera del periodo."
+  ]
+}
+
+=== A3: Waiting-list excluded from occupancy (cap10, 4 confirmed + 3 waiting_list) ===
+{
+  "occupancyPct": 40,
+  "eligibleBookings": 4
+}
+
+=== A4: Active user with only a cancelled recent booking -> inactive? ===
+{
+  "flaggedUsers": [
+    {
+      "id": "u1",
+      "inactiveDays": 545,
+      "referenceType": "creation_date_proxy"
+    }
+  ]
+}
+
+=== A5: attended=true on a box-cancelled session -> ignored for inactivity? ===
+{
+  "flaggedUsers": [
+    {
+      "id": "u1",
+      "inactiveDays": 545,
+      "referenceType": "creation_date_proxy"
+    }
+  ],
+  "occupancyStatus": "insufficient_data",
+  "occupancySessionsAnalyzed": 0
+}
+
+=== A6: Period with no sessions (data only in May, ask June) ===
+{
+  "avgStatus": "insufficient_data",
+  "avgPct": null,
+  "cancStatus": "insufficient_data"
+}
+
+=== A7: Deterministic ordering across repeated runs (two equal-occupancy classes) ===
+{
+  "identicalAcrossRuns": true,
+  "order": [
+    "Aero",
+    "Zumba"
+  ]
+}
+
+=== A8: Over-capacity occupancy (cap5, 7 confirmed) not truncated? ===
+{
+  "occupancyPct": 140,
+  "limitations": [
+    "La ocupación mide reservas, no asistencia efectiva.",
+    "1 sesiones superan la capacidad registrada; no se ha truncado el porcentaje."
+  ]
+}
+
+
+===== SUMMARY (candidate-x) =====
+A1: ran
+A2: ran
+A3: ran
+A4: ran
+A5: ran
+A6: ran
+A7: ran
+A8: ran

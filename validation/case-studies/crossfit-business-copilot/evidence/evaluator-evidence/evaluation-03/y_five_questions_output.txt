@@ -1,0 +1,72 @@
+########## ¿Cuál fue la ocupación media de este mes?
+Métrica: ocupación media
+Periodo: este mes (2026-07-01 a 2026-07-20)
+
+Resultado:
+  Ocupación media: 60.1%
+
+Datos utilizados: sesiones=104, reservas_confirmadas=773
+Exclusiones: Reservas en lista de espera y reservas canceladas no cuentan como ocupación.
+Supuestos: Ocupación de una sesión = reservas confirmadas y no canceladas / capacidad de esa sesión (Asunción A3/A5, docs/03_API_Discovery.md).; La ocupación media de un periodo es la media (no ponderada) de la ocupación de cada sesión programada en ese periodo.
+
+########## ¿Qué tres clases tuvieron menor ocupación este mes?
+Métrica: clases con menor ocupación
+Periodo: este mes (2026-07-01 a 2026-07-20)
+
+Resultado:
+  1. Movilidad: 16.4% (14 sesiones)
+  2. Open Box: 28.3% (3 sesiones)
+  3. CrossFit Kids: 45.8% (3 sesiones)
+
+Datos utilizados: sesiones=104, clases_distintas=6
+Exclusiones: Reservas en lista de espera y reservas canceladas no cuentan como ocupación.
+Supuestos: Ocupación de una sesión = reservas confirmadas y no canceladas / capacidad de esa sesión (Asunción A3/A5, docs/03_API_Discovery.md).; La ocupación media de un periodo es la media (no ponderada) de la ocupación de cada sesión programada en ese periodo.
+
+########## ¿Qué horario tuvo más cancelaciones este mes?
+Métrica: tasa de cancelación por franja horaria
+Periodo: este mes (2026-07-01 a 2026-07-20)
+
+Resultado:
+  1. 07:00: 30.0% (42/140 reservas)
+  2. 11:00: 19.0% (4/21 reservas)
+  3. 09:00: 17.9% (5/28 reservas)
+
+Datos utilizados: sesiones=104, reservas_totales=873
+Exclusiones: Las reservas en lista de espera se cuentan como reserva a efectos de esta tasa si figuran canceladas o no.
+Supuestos: La franja horaria es la hora de inicio programada de la sesión (HH:MM), no un rango.; Tasa de cancelación = reservas canceladas / total de reservas realizadas para esa franja en el periodo.
+
+########## ¿Qué usuarios llevan más de 21 días sin asistir?
+Métrica: usuarios activos sin reservas en más de 21 días
+Periodo: a fecha de 2026-07-20, corte de 21 días (— a 2026-07-20)
+
+Resultado:
+  - Paula Dominguez (id 15): última reserva 2026-05-01, 80 días sin reservar
+  - Daniel Blanco (id 20): última reserva 2026-05-04, 77 días sin reservar
+  - Alvaro Moreno (id 10): última reserva 2026-05-15, 66 días sin reservar
+  - Silvia Perez (id 25): última reserva 2026-05-22, 59 días sin reservar
+  - Jorge Moreno (id 30): última reserva 2026-05-22, 59 días sin reservar
+  - Noelia Navarro (id 33): última reserva 2026-06-11, 39 días sin reservar
+  - Patricia Dominguez (id 35): última reserva 2026-06-19, 31 días sin reservar
+  - Nuria Alvarez (id 11): última reserva 2026-06-20, 30 días sin reservar
+  - Manuel Blanco (id 40): última reserva 2026-06-22, 28 días sin reservar
+  - Victor Martinez (id 22): última reserva 2026-06-27, 23 días sin reservar
+
+Datos utilizados: usuarios_activos_evaluados=36
+Exclusiones: Usuarios dados de baja (deactivated_on no nulo) no se consideran, aunque lleven tiempo sin reservar.
+Supuestos: Un usuario se considera 'activo' si no tiene fecha de baja registrada (Asunción A1, docs/03_API_Discovery.md).; La inactividad se mide por ausencia de reservas (cualquier estado), no de asistencia confirmada, porque la API documentada solo expone un endpoint de 'sin reserva desde fecha', no de 'sin asistencia desde fecha'.
+
+########## Compara la ocupación de este mes con la del mes anterior.
+Métrica: comparación de ocupación entre dos periodos
+Periodo: este mes vs el mes anterior (2026-06-01 a 2026-07-20)
+
+Resultado:
+  este mes: 60.1% (104 sesiones)
+  el mes anterior: 61.1% (162 sesiones)
+  Diferencia: +1.0 puntos porcentuales
+  Variación relativa: +1.7%
+
+Datos utilizados: sesiones_periodo_a=104, sesiones_periodo_b=162
+Exclusiones: Reservas en lista de espera y reservas canceladas no cuentan como ocupación.
+Supuestos: Ocupación de una sesión = reservas confirmadas y no canceladas / capacidad de esa sesión (Asunción A3/A5, docs/03_API_Discovery.md).; La ocupación media de un periodo es la media (no ponderada) de la ocupación de cada sesión programada en ese periodo.
+Limitaciones: El número de sesiones difiere considerablemente entre periodos (104 vs 162); la comparación puede no ser directamente equivalente.
+

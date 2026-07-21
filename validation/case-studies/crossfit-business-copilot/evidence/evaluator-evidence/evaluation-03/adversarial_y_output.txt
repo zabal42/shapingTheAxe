@@ -1,0 +1,94 @@
+
+=== A1: Empty dataset -> average occupancy ===
+{
+  "result": null,
+  "data_included": {
+    "sesiones": 0
+  },
+  "limitations": [
+    "No hay sesiones programadas en el periodo solicitado; no es posible calcular esta métrica."
+  ]
+}
+
+=== A2: Zero-capacity session excluded? (cap0 + cap10 with 5 confirmed) ===
+{
+  "result": {
+    "ocupacion_media_pct": 25.0
+  },
+  "data_included": {
+    "sesiones": 2,
+    "reservas_confirmadas": 5
+  },
+  "exclusions": [
+    "Reservas en lista de espera y reservas canceladas no cuentan como ocupación."
+  ]
+}
+
+=== A3: Waiting-list excluded from occupancy (cap10, 4 confirmed + 3 waiting_list) ===
+{
+  "result": {
+    "ocupacion_media_pct": 40.0
+  },
+  "data_included": {
+    "sesiones": 1,
+    "reservas_confirmadas": 4
+  }
+}
+
+=== A4: Active user with only a cancelled recent booking -> inactive? ===
+{
+  "flagged": []
+}
+
+=== A5: attended=true on a (would-be) box-cancelled session ===
+{
+  "flagged": [],
+  "note": "ClassSession has no 'cancelled' field; a box-cancelled session cannot be modelled or excluded.",
+  "occupancy_result": {
+    "ocupacion_media_pct": 10.0
+  },
+  "occupancy_sessions": {
+    "sesiones": 1,
+    "reservas_confirmadas": 1
+  }
+}
+
+=== A6: Period with no sessions (data only in May, ask June) ===
+{
+  "avg_result": null,
+  "avg_limitations": [
+    "No hay sesiones programadas en el periodo solicitado; no es posible calcular esta métrica."
+  ],
+  "canc_result": [],
+  "canc_limitations": [
+    "No hay sesiones programadas en el periodo solicitado; no es posible calcular esta métrica."
+  ]
+}
+
+=== A7: Deterministic ordering across repeated runs (two equal-occupancy classes) ===
+{
+  "identical_across_runs": true,
+  "order": [
+    "Zumba",
+    "Aero"
+  ]
+}
+
+=== A8: Over-capacity occupancy (cap5, 7 confirmed) not truncated? ===
+{
+  "result": {
+    "ocupacion_media_pct": 140.0
+  },
+  "limitations": []
+}
+
+
+===== SUMMARY (candidate-y) =====
+A1: ran
+A2: ran
+A3: ran
+A4: ran
+A5: ran
+A6: ran
+A7: ran
+A8: ran

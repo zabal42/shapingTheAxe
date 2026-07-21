@@ -1,0 +1,71 @@
+################## N1: [¿Qué entrenador consigue mayor fidelidad de clientes?]
+No puedo responder con fiabilidad: No hay evidencia suficiente para medir fidelidad por entrenador.
+Datos o decisiones que faltan:
+- Una definición aprobada de fidelidad.
+- Atribución histórica fiable de cada asistencia a un entrenador.
+- Un periodo y una población comparables.
+No se ha calculado ni inventado ninguna cifra.
+
+################## N2: [Enséñame las clases con menos ocupación este mes.]
+Resultado
+1. Halterofilia a las 19:00: 37,5% (2 sesiones).
+2. WOD a las 18:00: 62,5% (2 sesiones).
+3. WOD a las 07:00: 90% (2 sesiones).
+
+Métrica: Ocupación media por clase y horario, orden ascendente
+Periodo: 2026-06-01 a 2026-06-30, ambos inclusive
+Datos utilizados: sesiones analizadas=6, grupos analizados=3
+Exclusiones:
+- 1 sesión cancelada por el box.
+- 1 sesión sin capacidad positiva.
+- Reservas canceladas, en lista de espera o fuera del periodo.
+Supuestos:
+- Ocupación = reservas confirmadas y no canceladas / capacidad de la sesión.
+- La media del periodo otorga el mismo peso a cada sesión válida.
+Limitaciones:
+- La ocupación mide reservas, no asistencia efectiva.
+- No se detectaron sesiones por encima de su capacidad registrada.
+- La clasificación agrupa por tipo de clase y hora, no por entrenador ni sala.
+
+################## N3: [¿Qué clases funcionan peor este mes?]
+Resultado
+1. Halterofilia a las 19:00: 37,5% (2 sesiones).
+2. WOD a las 18:00: 62,5% (2 sesiones).
+3. WOD a las 07:00: 90% (2 sesiones).
+
+Métrica: Ocupación media por clase y horario, orden ascendente
+Periodo: 2026-06-01 a 2026-06-30, ambos inclusive
+Datos utilizados: sesiones analizadas=6, grupos analizados=3
+Exclusiones:
+- 1 sesión cancelada por el box.
+- 1 sesión sin capacidad positiva.
+- Reservas canceladas, en lista de espera o fuera del periodo.
+Supuestos:
+- Ocupación = reservas confirmadas y no canceladas / capacidad de la sesión.
+- La media del periodo otorga el mismo peso a cada sesión válida.
+Limitaciones:
+- La ocupación mide reservas, no asistencia efectiva.
+- No se detectaron sesiones por encima de su capacidad registrada.
+- La clasificación agrupa por tipo de clase y hora, no por entrenador ni sala.
+
+################## N4: [¿Cuáles son los horarios menos aprovechados?]
+Necesito una aclaración: Indica el periodo con dos fechas YYYY-MM-DD, “este mes” o “el mes anterior”.
+
+################## N5: [Compara las cancelaciones de este mes con el mes anterior.]
+Necesito una aclaración: La pregunta mezcla varias métricas (occupancy_comparison, cancellation_rate). Indica una sola.
+
+################## N6: [Compara la ocupación.]
+Necesito una aclaración: Indica dos periodos: cuatro fechas YYYY-MM-DD o “este mes con el mes anterior”.
+
+################## N7: [¿Qué usuarios llevan sin asistir?]
+Necesito una aclaración: Indica el umbral de inactividad, por ejemplo “más de 21 días”.
+
+################## N8: []
+Necesito una aclaración: Escribe una pregunta de negocio.
+
+################## N9: [Dame las 2 clases con menor ocupación entre 2026-05-01 y 2026-05-31]
+No puedo responder con fiabilidad: La pregunta no corresponde a una de las cinco métricas del MVP.
+Datos o decisiones que faltan:
+- Una métrica soportada y sus parámetros obligatorios.
+No se ha calculado ni inventado ninguna cifra.
+
