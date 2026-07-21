@@ -1,3 +1,11 @@
+> **Histórico — verbatim, no normativo.** Procedencia:
+> `STA/STA-Assistant/STA_Assistants_Foundation_v0.1/ELDORADO_HYPOTHESIS.md`
+> (recuperado de `git show HEAD:...`, commit `5f92056`). Congelado el
+> 2026-07-21. No editar. Versión consolidada actual:
+> [`../ELDORADO_HYPOTHESIS.md`](../ELDORADO_HYPOTHESIS.md).
+
+---
+
 # Hipótesis Eldorado
 
 **Estado:** hipótesis ambiciosa no validada

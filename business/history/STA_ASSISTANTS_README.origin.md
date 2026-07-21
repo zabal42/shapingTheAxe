@@ -1,3 +1,12 @@
+> **Histórico — verbatim, no normativo.** Procedencia:
+> `STA/STA-Assistant/STA_Assistants_Foundation_v0.1/README.md` (recuperado de
+> `git show HEAD:...`, commit `5f92056`). Congelado el 2026-07-21. No editar.
+> Un borrador anterior de esta reorganización sustituyó este documento por un
+> índice nuevo (`../README.md`) en lugar de conservarlo; este archivo repara
+> esa pérdida.
+
+---
+
 # STA Assistants
 
 **Estado:** exploración de producto  
